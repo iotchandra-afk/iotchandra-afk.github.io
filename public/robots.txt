@@ -1,0 +1,9 @@
+# Chandra Kanojia — chandrakanojia.com
+User-agent: *
+Allow: /
+
+# Keep draft/preview paths out if they exist
+Disallow: /drafts/
+Disallow: /admin/
+
+Sitemap: https://chandrakanojia.com/sitemap.xml

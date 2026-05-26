@@ -1,0 +1,29 @@
+---
+// 404.astro — Custom not-found page
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Page Not Found | Chandra Kanojia"
+  description="The page you are looking for does not exist. Return to the Chandra Kanojia executive reputation platform."
+  noIndex={true}
+>
+  <section class="section section--lg" aria-labelledby="not-found-heading">
+    <div class="container">
+      <div style="max-width: 480px; padding: var(--space-32) 0;">
+        <p class="section-overline" aria-hidden="true">404</p>
+        <h1 class="page-title" id="not-found-heading" style="margin-top: var(--space-4);">
+          Page not found.
+        </h1>
+        <p class="page-lede" style="margin-top: var(--space-6);">
+          The page you are looking for does not exist or has moved.
+          Return to the home page or navigate using the menu above.
+        </p>
+        <div class="hero-actions" style="margin-top: var(--space-10);">
+          <a href="/" class="btn btn--primary">Return Home</a>
+          <a href="/executive-profile" class="btn btn--ghost">Executive Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F1F8FC"/>
+  <rect x="0" y="0" width="1200" height="2" fill="#C7D8E2"/>
+  <rect x="0" y="628" width="1200" height="2" fill="#C7D8E2"/>
+  <text x="80" y="260" font-family="sans-serif" font-size="64" font-weight="300" fill="#090A0B">Chandra Kanojia</text>
+  <text x="80" y="330" font-family="sans-serif" font-size="28" font-weight="400" fill="#6E7881">Enterprise AI &amp; Transformation Leader</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="20" font-weight="400" fill="#C7D8E2">Fortune 100 Financial Services · Global Delivery · Operating-Model Redesign</text>
+  <text x="80" y="560" font-family="monospace" font-size="16" fill="#C7D8E2">chandrakanojia.com</text>
+</svg>

@@ -1,0 +1,175 @@
+---
+// BaseLayout.astro — Chandra Kanojia Executive Site
+// Handles: SEO meta, OG, JSON-LD, theme, accessibility scaffold
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  jsonLd?: object | object[];
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/images/og-default.png',
+  jsonLd,
+  noIndex = false,
+} = Astro.props;
+
+const siteUrl = 'https://chandrakanojia.com';
+const canonicalUrl = canonical ? canonical : `${siteUrl}${Astro.url.pathname}`;
+const fullTitle = title.includes('Chandra Kanojia') ? title : `${title} | Chandra Kanojia`;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// Person schema — entity anchor
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}/#person`,
+  "name": "Chandra Kanojia",
+  "url": siteUrl,
+  "description": "Enterprise AI and transformation leader with 15+ years of experience in operating-model redesign, CRM and service-platform modernization, and large-scale business transformation inside Fortune 100 financial services institutions.",
+  "jobTitle": "Enterprise AI and Transformation Leader",
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Indian Institute of Management Bangalore",
+      "url": "https://www.iimb.ac.in"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Carnegie Mellon University",
+      "description": "CIO Program"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "National Institute of Technology, Allahabad"
+    }
+  ],
+  "knowsAbout": [
+    "Enterprise AI Transformation",
+    "Operating Model Redesign",
+    "CRM and Service Platform Modernization",
+    "Enterprise Transformation Governance",
+    "Workflow Transformation",
+    "Regulated Financial Services Transformation",
+    "Associate and Customer Experience",
+    "Digital Platform Modernization",
+    "Large-Scale Program Execution"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/chandra-kanojia/"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  "name": "Chandra Kanojia",
+  "url": siteUrl,
+  "description": "Enterprise AI and transformation leadership — the executive reputation platform of Chandra Kanojia.",
+  "author": { "@id": `${siteUrl}/#person` }
+};
+
+const allSchemas = [personSchema, websiteSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Chandra Kanojia" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Fonts — Inter Tight, Inter, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles — loaded via Astro import for cache-busting -->
+  <link rel="stylesheet" href="/styles/global.css" />
+  <!-- Note: also imported below via Astro for build processing -->
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
+
+  <!-- Theme initialization — runs before paint to prevent flash -->
+  <script is:inline>
+    (function() {
+      const saved = localStorage.getItem('ck-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="site-wrapper">
+    <slot name="nav" />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </div>
+
+  <!-- Theme toggle script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('ck-theme', next);
+        toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      });
+    }
+
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobile-nav-toggle');
+    const navWrapper = document.getElementById('nav-links-wrapper');
+    if (mobileToggle && navWrapper) {
+      mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', String(!expanded));
+        navWrapper.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>

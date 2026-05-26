@@ -1,0 +1,276 @@
+---
+// index.astro — Home page
+// Purpose: Pass the 30-second test for every decision maker
+import PageLayout from '../layouts/PageLayout.astro';
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://chandrakanojia.com/#webpage",
+  "url": "https://chandrakanojia.com",
+  "name": "Chandra Kanojia — Enterprise AI and Transformation Leader",
+  "description": "Chandra Kanojia is an enterprise AI and transformation leader with 15+ years of experience in operating-model redesign, CRM modernization, and large-scale business transformation inside Fortune 100 financial services institutions.",
+  "isPartOf": { "@id": "https://chandrakanojia.com/#website" },
+  "about": { "@id": "https://chandrakanojia.com/#person" }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chandrakanojia.com" }
+  ]
+};
+---
+
+<PageLayout
+  title="Chandra Kanojia — Enterprise AI and Transformation Leader"
+  description="Chandra Kanojia is an enterprise AI and transformation leader with 15+ years of experience in operating-model redesign, CRM modernization, and large-scale business transformation inside Fortune 100 financial services institutions."
+  jsonLd={[webpageSchema, breadcrumbSchema]}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="container">
+      <p class="hero-eyebrow" aria-hidden="true">Enterprise Transformation · Global Financial Services</p>
+      <h1 class="hero-headline" id="hero-headline">
+        Enterprise Transformation<br/>at Scale.
+      </h1>
+      <p class="hero-subheadline">
+        Chandra Kanojia helps complex enterprises turn AI, data, platforms,
+        and operating-model change into measurable business outcomes.
+        15+ years. Fortune 100 financial services. Global delivery.
+      </p>
+      <div class="hero-actions">
+        <a href="/executive-profile" class="btn btn--primary">View Executive Profile</a>
+        <a href="/enterprise-ai-transformation" class="btn btn--ghost">Read the Operating Thesis →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROOF BAND ═══ -->
+  <section class="proof-band" aria-label="Institutional experience">
+    <div class="container">
+      <div class="proof-band-inner">
+        <span class="proof-label">Experience across</span>
+        <div class="proof-items" role="list">
+          <span class="proof-item" role="listitem">Fidelity Investments</span>
+          <span class="proof-item" role="listitem">Accenture</span>
+          <span class="proof-item" role="listitem">Cognizant</span>
+          <span class="proof-item" role="listitem">Virtusa</span>
+          <span class="proof-item" role="listitem">Fortune 100 Financial Services</span>
+          <span class="proof-item" role="listitem">US · UK · Germany · South Asia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OPERATING THESIS SUMMARY ═══ -->
+  <section class="section" aria-labelledby="thesis-heading">
+    <div class="container">
+      <div class="om-section">
+        <div class="om-grid">
+          <div class="om-label" aria-hidden="true">Thesis</div>
+          <div class="om-content">
+            <div class="section-header">
+              <p class="section-overline" aria-hidden="true">The Operating Thesis</p>
+              <h2 class="section-title" id="thesis-heading">
+                Transformation only counts when it lasts.
+              </h2>
+              <p class="section-body">
+                Most enterprise AI programs fail not because the technology is wrong,
+                but because the operating model was never designed to absorb it.
+                Real transformation requires three things built together: governance
+                that decides fast, adoption that changes behavior at scale, and
+                execution discipline that converts strategy into measurable outcomes.
+              </p>
+              <p class="section-body" style="margin-top: 1.25rem;">
+                That is the work. That is the record.
+              </p>
+            </div>
+            <a href="/enterprise-ai-transformation" class="btn btn--text">
+              Read the full operating thesis
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule" style="margin: 0;" aria-hidden="true"/>
+
+  <!-- ═══ CORE TRANSFORMATION THEMES ═══ -->
+  <section class="section" aria-labelledby="themes-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-overline" aria-hidden="true">Operating Domains</p>
+        <h2 class="section-title" id="themes-heading">
+          The work that creates lasting organizational change.
+        </h2>
+      </div>
+
+      <div class="theme-grid" role="list">
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">01</p>
+          <h3>AI-Enabled Operating Models</h3>
+          <p>Redesigning how organizations work — not just the tools they use. AI adoption requires an operating model built to absorb it.</p>
+        </article>
+
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">02</p>
+          <h3>CRM & Service-Platform Modernization</h3>
+          <p>Turning CRM from a system of record into a system of action. Relationship intelligence at enterprise scale.</p>
+        </article>
+
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">03</p>
+          <h3>Workflow Transformation & Cost-to-Serve</h3>
+          <p>Eliminating process cost while improving service quality. Measurable efficiency at regulated-institution scale.</p>
+        </article>
+
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">04</p>
+          <h3>Regulated-Industry Transformation</h3>
+          <p>Enterprise change inside the constraints that matter most. Compliance is a design input, not a constraint to work around.</p>
+        </article>
+
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">05</p>
+          <h3>Governance, Adoption & Execution Discipline</h3>
+          <p>Making transformation stick — measurably, durably. Accountability architecture that converts roadmaps into outcomes.</p>
+        </article>
+
+        <article class="theme-cell" role="listitem">
+          <p class="theme-cell-label" aria-hidden="true">06</p>
+          <h3>Associate & Customer Experience at Scale</h3>
+          <p>Service quality and associate experience are the same program. Both improve when the operating model is right.</p>
+        </article>
+      </div>
+
+      <div style="margin-top: var(--space-10);">
+        <a href="/executive-profile" class="btn btn--ghost">View full profile →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SELECTED PROOF POINTS ═══ -->
+  <section class="section section--surface" aria-labelledby="proof-heading">
+    <div class="container">
+      <div class="om-grid">
+        <div class="om-label" aria-hidden="true">Proof</div>
+        <div class="om-content">
+          <div class="section-header">
+            <p class="section-overline" aria-hidden="true">Operating Record</p>
+            <h2 class="section-title" id="proof-heading">
+              Impact that is specific, measurable, and cleared for context.
+            </h2>
+          </div>
+
+          <div class="proof-vignettes">
+            <article class="proof-vignette">
+              <p class="proof-vignette-tag" aria-hidden="true">Platform at Scale</p>
+              <h3>Service Capability at Enterprise Scale</h3>
+              <p>Led delivery across scaled service-platform capabilities within a regulated financial services environment — establishing governance, workflow, and adoption infrastructure that sustained consistent operational availability across millions of interactions.</p>
+            </article>
+
+            <article class="proof-vignette">
+              <p class="proof-vignette-tag" aria-hidden="true">Commercial Transformation</p>
+              <h3>AI-Enabled Relationship Intelligence</h3>
+              <p>Designed and deployed an AI-enabled relationship intelligence model that contributed to measurable commercial outcomes and year-over-year growth in targeted wealth management segments.</p>
+            </article>
+
+            <article class="proof-vignette">
+              <p class="proof-vignette-tag" aria-hidden="true">Associate Experience</p>
+              <h3>Advisor Digital Experience Platform</h3>
+              <p>Architected a digital experience platform serving thousands of financial advisors — redesigning tools, workflows, and communications infrastructure to reduce friction and improve client-service capacity.</p>
+            </article>
+
+            <article class="proof-vignette">
+              <p class="proof-vignette-tag" aria-hidden="true">Global Delivery</p>
+              <h3>Multi-Jurisdictional Transformation Programs</h3>
+              <p>Led cross-functional transformation programs across the US, UK, Germany, and South Asia — managing multi-vendor, multi-regulatory environments with consistent outcome architecture.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED INSIGHTS ═══ -->
+  <section class="section" aria-labelledby="insights-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-overline" aria-hidden="true">Insights</p>
+        <h2 class="section-title" id="insights-heading">
+          Analysis from an enterprise transformation operator.
+        </h2>
+      </div>
+
+      <div class="insights-grid">
+        <a href="/insights/enterprise-ai-fails-when-operating-model-cannot-absorb-it" class="insight-card" aria-label="Read: Enterprise AI Fails When the Operating Model Cannot Absorb It">
+          <div class="insight-card-meta">
+            <span class="insight-pillar">Enterprise AI</span>
+            <span class="insight-date">2025</span>
+          </div>
+          <h3>Enterprise AI Fails When the Operating Model Cannot Absorb It</h3>
+          <p>The dominant failure mode in enterprise AI is not technical. Organizations deploy capable models into operating environments not designed to absorb them — and wonder why the outcomes look like better reporting, not business change.</p>
+          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
+        </a>
+
+        <a href="/insights/crm-trap-systems-of-record-never-become-systems-of-action" class="insight-card" aria-label="Read: The CRM Trap: When Systems of Record Never Become Systems of Action">
+          <div class="insight-card-meta">
+            <span class="insight-pillar">CRM & Service</span>
+            <span class="insight-date">2025</span>
+          </div>
+          <h3>The CRM Trap: When Systems of Record Never Become Systems of Action</h3>
+          <p>CRM is the most consistently underperforming enterprise investment in financial services. The reason is not the platform. It is the operating model that was never redesigned to use it.</p>
+          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
+        </a>
+      </div>
+
+      <div style="margin-top: var(--space-10);">
+        <a href="/insights" class="btn btn--ghost">View all insights →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT CTA ═══ -->
+  <section class="section section--surface" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <p class="section-overline" aria-hidden="true">Start a Conversation</p>
+          <h2 class="section-title" id="cta-heading">
+            Executive search, board conversations, and strategic inquiries.
+          </h2>
+          <p class="section-body">
+            For CXO hiring leaders, executive search partners, board members, and
+            strategic collaborators: the right path starts with the right conversation.
+          </p>
+          <div class="hero-actions" style="margin-top: var(--space-8);">
+            <a href="/contact" class="btn btn--primary">Start a Conversation</a>
+            <a href="/executive-profile" class="btn btn--ghost">View Executive Profile</a>
+          </div>
+        </div>
+
+        <div class="stack stack--sm" style="padding-top: var(--space-4);">
+          <div class="credentials-list">
+            <div class="credential-item">
+              <span class="cred-org">IIM Bangalore</span>
+              <span class="cred-prog">MBA</span>
+            </div>
+            <div class="credential-item">
+              <span class="cred-org">Carnegie Mellon University</span>
+              <span class="cred-prog">CIO Program</span>
+            </div>
+            <div class="credential-item">
+              <span class="cred-org">NIT Allahabad</span>
+              <span class="cred-prog">B.Tech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>

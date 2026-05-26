@@ -1,0 +1,46 @@
+---
+// privacy.astro
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Privacy | Chandra Kanojia"
+  description="Privacy information for chandrakanojia.com. This site does not collect personal data beyond contact form submissions."
+  noIndex={false}
+>
+  <section class="page-header" aria-labelledby="privacy-heading">
+    <div class="container">
+      <h1 class="page-title" id="privacy-heading">Privacy.</h1>
+      <p class="page-lede">
+        This site is a static executive reputation platform. It does not run advertising,
+        behavioral tracking, or third-party analytics.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="privacy-content">
+    <div class="container container--prose">
+      <div class="prose">
+        <h2 id="privacy-content">What this site collects</h2>
+        <p>
+          This site does not use cookies, advertising networks, or behavioral tracking systems.
+          No personal contact information is collected or stored by this site.
+          All inquiries are directed through LinkedIn.
+        </p>
+
+        <h2>External services</h2>
+        <p>
+          This site loads fonts from Google Fonts. Google may process requests to their
+          servers in accordance with their privacy policy. No other external tracking or
+          analytics services are used.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about privacy on this site can be directed through the
+          <a href="/contact">contact page</a> via LinkedIn.
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>
