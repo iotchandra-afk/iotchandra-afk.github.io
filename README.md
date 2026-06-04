@@ -86,7 +86,7 @@ public/
 ## Required Before Launch
 
 1. **Confirm LinkedIn URL** — `https://www.linkedin.com/in/chandra-kanojia/` used throughout. Verify it is the canonical URL.
-2. **Executive portrait** — No portrait in MVP. Add to `/public/images/` and reference in pages when ready.
+2. **Executive portrait** — No portrait in the initial build. Add to `/public/images/` and reference in pages when ready.
 3. **OG image** — `/public/images/og-default.png` is a placeholder SVG. Replace with a real 1200×630 PNG.
 4. **Proof metrics** — All metrics (7.2M+, 37%, 99.5%, $112M, $500M+, $8M–$12M, $10M–$300M, $15M–$20M) are published. Confirm each is approved for public use before pushing.
 5. **BCG Digital Leader** — Listed as a Program under Executive Development. Confirm the program name is accurate.
