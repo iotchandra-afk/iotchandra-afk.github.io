@@ -2,126 +2,104 @@
 import PageLayout from '../layouts/PageLayout.astro';
 
 const profileSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": "https://chandrakanojia.com/executive-profile/#profilepage",
-  "url": "https://chandrakanojia.com/executive-profile",
-  "name": "Chandra Kanojia Executive Profile",
-  "description": "Executive profile for Chandra Kanojia, focused on enterprise AI, CRM/Salesforce, workflow transformation, regulated financial services, platform reliability, governance, and operating-model execution.",
-  "mainEntity": { "@id": "https://chandrakanojia.com/#person" }
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': 'https://chandrakanojia.com/executive-profile/#profilepage',
+  url: 'https://chandrakanojia.com/executive-profile',
+  name: 'Chandra Kanojia Executive Profile',
+  description: 'Executive profile for Chandra Kanojia, focused on enterprise AI, CRM/Salesforce, workflow transformation, regulated financial services, platform reliability, governance, and operating-model execution.',
+  mainEntity: { '@id': 'https://chandrakanojia.com/#person' }
 };
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chandrakanojia.com" },
-    { "@type": "ListItem", "position": 2, "name": "Executive Profile", "item": "https://chandrakanojia.com/executive-profile" }
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://chandrakanojia.com' },
+    { '@type': 'ListItem', position: 2, name: 'Executive Profile', item: 'https://chandrakanojia.com/executive-profile' }
   ]
 };
-
-const metrics = [
-  ["7.2M+", "service cases managed"],
-  ["99.5%", "platform availability"],
-  ["$112M", "process-savings contribution"],
-  ["$500M+", "transformation-program scale"],
-  ["37%", "year-over-year growth supported"],
-  ["$10M–$300M", "pull-through deal influence"],
-  ["$15M–$20M", "delivery portfolio managed"],
-  ["$8M–$12M", "advisory revenue generated"]
-];
 ---
-
 <PageLayout
-  title="Chandra Kanojia | Enterprise AI, CRM & Financial Services Transformation Executive"
-  description="Chandra Kanojia is an enterprise AI and regulated-transformation operator focused on AI, CRM/Salesforce, workflow, analytics, platform reliability, governance, and measurable operating outcomes."
+  title="Chandra Kanojia | Enterprise AI, CRM & Regulated Transformation"
+  description="Chandra Kanojia is an enterprise AI and regulated-transformation operator focused on AI, CRM/Salesforce, workflow, analytics, platform reliability, governance, and operating outcomes."
   canonical="https://chandrakanojia.com/executive-profile"
   jsonLd={[profileSchema, breadcrumbSchema]}
 >
   <section class="page-hero" aria-labelledby="profile-title">
     <div class="container narrow">
-      <p class="eyebrow">Executive Profile</p>
-      <h1 id="profile-title">Enterprise AI and regulated-transformation operator.</h1>
+      <p class="kicker">Executive Profile</p>
+      <h1 id="profile-title">Enterprise AI and regulated transformation.</h1>
       <p class="lead">
         Chandra Kanojia has a career arc from global consulting to Fortune 100 buyer-side execution. His work focuses on turning AI, CRM/Salesforce, workflow, analytics, and platform investment into measurable operating outcomes.
       </p>
-      <p>
+      <p class="body-large" style="margin-top:1rem;">
         His strongest lane is where enterprise AI has to become real inside complex institutions: governed workflows, adoption, platform reliability, cost-to-serve reduction, advisor and associate productivity, risk discipline, and executive delivery confidence.
       </p>
-      <p>
-        Chandra’s distinction is practical: consulting-grade pattern recognition, Fortune 100 buyer-side operating proof, regulated-enterprise judgment, and a record of converting platform and AI investment into measurable operating outcomes.
-      </p>
     </div>
   </section>
 
-  <section class="metric-section" aria-label="Operating proof">
+  <section class="section compact" aria-labelledby="profile-proof">
     <div class="container">
-      <div class="metric-grid">
-        {metrics.map(([value, label]) => (
-          <div class="metric-card">
-            <strong>{value}</strong>
-            <span>{label}</span>
-          </div>
-        ))}
+      <div class="proof-line">
+        <h2 id="profile-proof">Operating proof spans</h2>
+        <p>
+          Enterprise service platforms / CRM &amp; Salesforce modernization / workflow and case management / analytics / platform reliability / AI-enabled operations / regulated financial-services transformation / global consulting mandates
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="value-title">
+  <section class="section alt" aria-labelledby="value-title">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Deployment map</p>
-        <h2 id="value-title">Where Chandra creates value.</h2>
+        <div class="intro">
+          <p class="kicker">Deployment map</p>
+          <h2 id="value-title">Where Chandra creates value.</h2>
+        </div>
       </div>
-      <div class="card-grid three">
-        <article class="card">
+      <div class="lane-grid">
+        <article class="lane-card">
+          <span class="lane-number">01</span>
           <h3>Enterprise AI execution</h3>
-          <p>Moving AI from pilots and demos into governed workflow patterns that business leaders can fund, adopt, and scale.</p>
+          <p>Moving AI from pilots and demos into governed workflow patterns business leaders can fund, adopt, and scale.</p>
         </article>
-        <article class="card">
-          <h3>CRM / Salesforce modernization</h3>
-          <p>Turning CRM from a system of record into a system of action for advisors, associates, service teams, and relationship leaders.</p>
+        <article class="lane-card">
+          <span class="lane-number">02</span>
+          <h3>CRM, workflow, and enterprise applications</h3>
+          <p>Modernizing CRM, case management, analytics, advisor platforms, service operations, and workflow systems where regulated work actually moves.</p>
         </article>
-        <article class="card">
-          <h3>Enterprise workflow and applications</h3>
-          <p>Improving how work moves across CRM, case management, analytics, service operations, advisor platforms, and large enterprise applications.</p>
-        </article>
-        <article class="card">
-          <h3>Cost-to-serve and productivity</h3>
-          <p>Reducing operating friction while improving service quality, advisor effectiveness, associate experience, and execution confidence.</p>
-        </article>
-        <article class="card">
+        <article class="lane-card">
+          <span class="lane-number">03</span>
           <h3>Regulated transformation</h3>
           <p>Building change inside financial-services, insurance, retirement, brokerage, healthcare, risk, compliance, and control realities.</p>
         </article>
-        <article class="card">
-          <h3>Executive delivery confidence</h3>
-          <p>Creating the governance, cadence, and proof structure that makes large transformation programs credible.</p>
-        </article>
       </div>
     </div>
   </section>
 
-  <section class="section muted" aria-labelledby="career-title">
+  <section class="section" aria-labelledby="career-title">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Career arc</p>
-        <h2 id="career-title">Consulting-side pattern recognition. Buyer-side operating proof.</h2>
+        <div class="intro">
+          <p class="kicker">Career arc</p>
+          <h2 id="career-title">Consulting pattern recognition. Buyer-side execution.</h2>
+        </div>
       </div>
-      <div class="timeline-clean">
-        <article>
+      <div class="career-list">
+        <article class="career-row">
           <h3>Fidelity Investments</h3>
           <p>Fortune 100 buyer-side execution across AI-enabled workflow, Salesforce/CRM, analytics, service platforms, governance, advisor and associate enablement, and platform reliability.</p>
         </article>
-        <article>
+        <article class="career-row">
           <h3>Accenture</h3>
           <p>Strategy and transformation advisory across customer, sales, service, CRM, operating model, and value-realization mandates.</p>
         </article>
-        <article>
+        <article class="career-row">
           <h3>Cognizant</h3>
           <p>North America financial-services digital consulting leadership, including advisory revenue generation, CXO relationships, and transformation demand shaping.</p>
         </article>
-        <article>
+        <article class="career-row">
           <h3>Virtusa and early Cognizant consulting</h3>
           <p>Global insurance, healthcare, underwriting, claims, legal, and financial-services transformation across the US, UK, Germany, and South Asia.</p>
         </article>
@@ -129,32 +107,28 @@ const metrics = [
     </div>
   </section>
 
-  <section class="section" aria-labelledby="education-title">
-    <div class="container two-column">
+  <section class="section alt" aria-labelledby="development-title">
+    <div class="container dev-section">
       <div>
-        <p class="eyebrow">Education</p>
-        <h2 id="education-title">Academic foundation.</h2>
-        <ul class="clean-list">
-          <li>IIM Bangalore, MBA.</li>
-          <li>Carnegie Mellon University, CIO Program.</li>
-          <li>NIT Allahabad, B.Tech.</li>
-        </ul>
+        <p class="kicker">Education &amp; Development</p>
+        <h2 id="development-title">Business strategy, technology governance, and AI product fluency.</h2>
       </div>
-      <div>
-        <p class="eyebrow">Development</p>
-        <h2>Executive development and AI product fluency.</h2>
-        <p>Chandra’s development path is intentionally cross-disciplinary: business strategy, technology governance, AI product thinking, and enterprise operating execution.</p>
-        <p><strong>Executive development:</strong> Carnegie Mellon CIO Program; BCG Digital Leader.</p>
+      <div class="dev-list">
+        <p><strong>Education:</strong> IIM Bangalore, MBA; Carnegie Mellon University, CIO Program; NIT Allahabad, B.Tech.</p>
+        <p><strong>Executive development:</strong> BCG Digital Leader; Carnegie Mellon CIO Program.</p>
         <p><strong>AI and product fluency:</strong> Product Management; AI Product Management; AI Product Strategy; Advanced AI Agents; AI Evals; Claude Code / AI-enabled development workflows.</p>
         <p><strong>Additional credentials and exposure:</strong> AI Generalist; Lean Six Sigma Black Belt; SAFe Agile; Certified ScrumMaster; PMP; TOGAF 9; Zachman Enterprise Architecture; Design Thinking; Salesforce and Pega exposure.</p>
       </div>
     </div>
   </section>
 
-  <section class="cta-section" aria-labelledby="profile-cta-title">
+  <section class="cta-section" aria-labelledby="profile-cta">
     <div class="container narrow">
-      <h2 id="profile-cta-title">For executive search, board, CXO, consulting, and enterprise AI conversations.</h2>
-      <a class="button primary" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      <div class="cta-box">
+        <h2 id="profile-cta">Discuss the mandate.</h2>
+        <p>For board, CXO, executive search, consulting, and enterprise AI conversations, connect directly on LinkedIn.</p>
+        <a class="button" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
     </div>
   </section>
 </PageLayout>

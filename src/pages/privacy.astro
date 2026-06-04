@@ -1,46 +1,26 @@
 ---
-// privacy.astro
 import PageLayout from '../layouts/PageLayout.astro';
 ---
-
 <PageLayout
   title="Privacy | Chandra Kanojia"
-  description="Privacy information for chandrakanojia.com. This site does not collect personal data beyond contact form submissions."
-  noIndex={false}
+  description="Privacy information for chandrakanojia.com. This site does not run advertising or behavioral tracking."
+  canonical="https://chandrakanojia.com/privacy"
 >
-  <section class="page-header" aria-labelledby="privacy-heading">
-    <div class="container">
-      <h1 class="page-title" id="privacy-heading">Privacy.</h1>
-      <p class="page-lede">
-        This site does not run advertising,
-        behavioral tracking, or third-party analytics.
-      </p>
+  <section class="page-hero" aria-labelledby="privacy-title">
+    <div class="container narrow">
+      <p class="kicker">Privacy</p>
+      <h1 id="privacy-title">Simple by design.</h1>
+      <p class="lead">This site does not run advertising, behavioral tracking, or a contact form. Conversations are directed through LinkedIn.</p>
     </div>
   </section>
-
-  <section class="section" aria-labelledby="privacy-content">
-    <div class="container container--prose">
-      <div class="prose">
-        <h2 id="privacy-content">What this site collects</h2>
-        <p>
-          This site does not use cookies, advertising networks, or behavioral tracking systems.
-          No personal contact information is collected or stored by this site.
-          All inquiries are directed through LinkedIn.
-        </p>
-
-        <h2>External services</h2>
-        <p>
-          This site loads fonts from Google Fonts. Google may process requests to their
-          servers in accordance with their privacy policy. No other external tracking or
-          analytics services are used.
-        </p>
-
-        <h2>Contact</h2>
-        <p>
-          Questions about privacy on this site can be directed through the
-          <a href="/contact">contact page</a> via LinkedIn.
-        </p>
-      </div>
+  <section class="section">
+    <div class="container prose-container prose">
+      <h2>What this site collects</h2>
+      <p>This site does not use cookies, advertising networks, or behavioral tracking systems. No personal contact information is collected or stored by this site.</p>
+      <h2>External services</h2>
+      <p>This site may load fonts from Google Fonts. Google may process requests to its servers in accordance with its privacy policy.</p>
+      <h2>Contact</h2>
+      <p>Questions about this site can be directed through the <a href="/contact">contact page</a>.</p>
     </div>
   </section>
 </PageLayout>

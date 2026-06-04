@@ -1,191 +1,28 @@
 ---
-// contact.astro — LinkedIn-only contact path. No email. No mailto.
 import PageLayout from '../layouts/PageLayout.astro';
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chandrakanojia.com" },
-    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://chandrakanojia.com/contact" }
-  ]
-};
-
+const LINKEDIN = 'https://www.linkedin.com/in/chandra-kanojia/';
 const contactPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "url": "https://chandrakanojia.com/contact",
-  "name": "Contact Chandra Kanojia",
-  "description": "For executive search, CXO, board, speaking, or strategic conversations, connect with Chandra Kanojia through LinkedIn."
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  url: 'https://chandrakanojia.com/contact',
+  name: 'Contact Chandra Kanojia',
+  description: 'For executive search, CXO, board, consulting, or enterprise AI conversations, connect with Chandra Kanojia through LinkedIn.'
 };
-
-const LINKEDIN = "https://www.linkedin.com/in/chandra-kanojia/";
 ---
-
 <PageLayout
   title="Contact | Chandra Kanojia"
-  description="For executive search, CXO, board, speaking, or strategic conversations, connect with Chandra Kanojia through LinkedIn."
-  jsonLd={[contactPageSchema, breadcrumbSchema]}
+  description="For executive search, CXO, board, consulting, or enterprise AI conversations, connect with Chandra Kanojia through LinkedIn."
+  canonical="https://chandrakanojia.com/contact"
+  jsonLd={contactPageSchema}
 >
-
-  <!-- ═══ PAGE HEADER ═══ -->
-  <section class="page-header" aria-labelledby="contact-heading">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <ol class="breadcrumb" role="list">
-          <li><a href="/">Home</a></li>
-          <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
-          <li aria-current="page">Contact</li>
-        </ol>
-      </nav>
-      <h1 class="page-title" id="contact-heading">
-        Start a Conversation.
-      </h1>
-      <p class="page-lede">
-        For executive search, CXO, board, speaking, or strategic conversations,
-        connect through LinkedIn.
-      </p>
-    </div>
-  </section>
-
-  <!-- ═══ CONTACT SECTION ═══ -->
-  <section class="section" aria-labelledby="contact-paths-heading">
-    <div class="container">
-      <div class="two-col" style="gap: var(--space-20);">
-
-        <!-- Primary LinkedIn path -->
-        <div>
-          <div class="section-header">
-            <p class="section-overline" aria-hidden="true">Connect</p>
-            <h2 class="section-title" id="contact-paths-heading">
-              LinkedIn is the right path for all inquiries.
-            </h2>
-            <p class="section-body">
-              Executive search partners, CXO hiring leaders, board members,
-              PE operating partners, speaking organizers, and strategic collaborators
-              are welcome to connect directly on LinkedIn with a brief note on context.
-            </p>
-          </div>
-
-          <div style="margin-top: var(--space-10);">
-            <a
-              href={LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn--primary"
-              aria-label="Connect with Chandra Kanojia on LinkedIn (opens in new tab)"
-            >
-              Connect on LinkedIn ↗
-            </a>
-          </div>
-
-          <div style="margin-top: var(--space-10); padding: var(--space-6) var(--space-8); border: var(--border-thin); border-radius: var(--radius-md); background: var(--color-surface);">
-            <p class="text-mono text-muted" style="margin-bottom: var(--space-3); font-size: var(--text-mono); letter-spacing: var(--ls-wider); text-transform: uppercase;">LinkedIn</p>
-            <a
-              href={LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              style="font-family: var(--font-mono); font-size: var(--text-small); color: var(--color-text-secondary); word-break: break-all;"
-              aria-label="Chandra Kanojia LinkedIn profile (opens in new tab)"
-            >
-              linkedin.com/in/chandra-kanojia/
-            </a>
-          </div>
-        </div>
-
-        <!-- Context sidebar -->
-        <aside aria-label="Inquiry types">
-          <div class="stack stack--md">
-            <div>
-              <p class="section-overline" style="margin-bottom: var(--space-6);" aria-hidden="true">Who should connect</p>
-
-              <div class="stack stack--sm">
-                {[
-                  {
-                    type: 'Executive Search',
-                    desc: 'Retained and contingency search partners researching CIO, CDO, CAIO, GM, or SVP enterprise platform mandates.',
-                  },
-                  {
-                    type: 'CXO / Board',
-                    desc: 'Fortune 100 hiring leaders and board members exploring enterprise AI and transformation leadership.',
-                  },
-                  {
-                    type: 'Speaking / Media',
-                    desc: 'Conference organizers, podcast hosts, and media seeking an enterprise transformation operator perspective.',
-                  },
-                  {
-                    type: 'Strategic Collaboration',
-                    desc: 'Senior practitioners and thought partners working on enterprise transformation challenges.',
-                  },
-                  {
-                    type: 'PE Operating Partners',
-                    desc: 'Private equity professionals exploring transformation leadership for portfolio companies.',
-                  },
-                ].map(item => (
-                  <div class="context-item">
-                    <p class="context-type">{item.type}</p>
-                    <p class="context-desc">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <hr style="border: none; border-top: 1px solid var(--color-hairline);" aria-hidden="true"/>
-
-            <div>
-              <p class="section-overline" style="margin-bottom: var(--space-5);" aria-hidden="true">Credentials</p>
-              <div class="credentials-list">
-                <div class="credential-item">
-                  <span class="cred-org">IIM Bangalore</span>
-                  <span class="cred-prog">MBA</span>
-                </div>
-                <div class="credential-item">
-                  <span class="cred-org">Carnegie Mellon</span>
-                  <span class="cred-prog">CIO Program</span>
-                </div>
-                <div class="credential-item">
-                  <span class="cred-org">NIT Allahabad</span>
-                  <span class="cred-prog">B.Tech</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+  <section class="page-hero" aria-labelledby="contact-title">
+    <div class="container narrow">
+      <p class="kicker">Contact</p>
+      <h1 id="contact-title">Start with context.</h1>
+      <p class="lead">For board, CXO, executive search, consulting, and enterprise AI conversations, connect directly on LinkedIn.</p>
+      <div class="hero-actions">
+        <a class="button primary" href={LINKEDIN} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </div>
     </div>
   </section>
-
 </PageLayout>
-
-<style>
-.breadcrumb {
-  display: flex; align-items: center; list-style: none;
-  padding: 0; margin: 0 0 var(--space-8);
-  font-family: var(--font-mono); font-size: var(--text-mono);
-  letter-spacing: var(--ls-wide); color: var(--color-text-muted);
-}
-.breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--color-text-primary); }
-
-.context-item {
-  padding: var(--space-5) 0;
-  border-bottom: var(--border-thin);
-}
-.context-item:last-child { border-bottom: none; }
-
-.context-type {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: var(--text-small);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
-  max-width: none;
-}
-
-.context-desc {
-  font-size: var(--text-small);
-  line-height: var(--lh-body);
-  color: var(--color-text-muted);
-  max-width: none;
-}
-</style>

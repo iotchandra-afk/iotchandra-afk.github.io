@@ -1,5 +1,4 @@
 ---
-// ArticleLayout.astro — wraps individual insight articles
 import PageLayout from './PageLayout.astro';
 
 interface Props {
@@ -9,141 +8,56 @@ interface Props {
   date: string;
   slug: string;
 }
-
 const { title, lede, pillar, date, slug } = Astro.props;
-
 const siteUrl = 'https://chandrakanojia.com';
 const canonicalUrl = `${siteUrl}/insights/${slug}`;
 
 const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "description": lede,
-  "url": canonicalUrl,
-  "datePublished": `${date}-01-01`,
-  "dateModified": `${date}-01-01`,
-  "author": { "@id": `${siteUrl}/#person` },
-  "publisher": { "@id": `${siteUrl}/#website` },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": canonicalUrl
-  }
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: lede,
+  url: canonicalUrl,
+  datePublished: `${date}-01-01`,
+  dateModified: `${date}-01-01`,
+  author: { '@id': `${siteUrl}/#person` },
+  publisher: { '@id': `${siteUrl}/#website` },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl }
 };
 
 const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
-    { "@type": "ListItem", "position": 2, "name": "Insights", "item": `${siteUrl}/insights` },
-    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl }
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteUrl}/insights` },
+    { '@type': 'ListItem', position: 3, name: title, item: canonicalUrl }
   ]
 };
 ---
-
-<PageLayout
-  title={`${title} | Chandra Kanojia`}
-  description={lede}
-  canonical={canonicalUrl}
-  jsonLd={[articleSchema, breadcrumbSchema]}
->
-  <!-- Article Header -->
+<PageLayout title={`${title} | Chandra Kanojia`} description={lede} canonical={canonicalUrl} jsonLd={[articleSchema, breadcrumbSchema]}>
   <section class="article-header" aria-labelledby="article-title">
-    <div class="container container--prose">
+    <div class="container prose-container">
       <nav aria-label="Breadcrumb">
         <ol class="breadcrumb" role="list">
           <li><a href="/">Home</a></li>
-          <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
+          <li aria-hidden="true">/</li>
           <li><a href="/insights">Insights</a></li>
-          <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
-          <li aria-current="page" style="color: var(--color-text-muted);">Article</li>
         </ol>
       </nav>
-
-      <div class="article-meta">
-        <span class="article-pillar">{pillar}</span>
-        <span class="article-date">{date}</span>
-      </div>
-
-      <h1 class="article-title" id="article-title">{title}</h1>
+      <div class="article-meta"><span>{pillar}</span><span>{date}</span></div>
+      <h1 id="article-title" class="article-title">{title}</h1>
       <p class="article-lede">{lede}</p>
     </div>
   </section>
-
-  <!-- Article Body -->
   <section class="article-body">
-    <div class="container container--prose">
-      <div class="prose">
-        <slot />
-      </div>
-
-      <hr style="border: none; border-top: 1px solid var(--color-hairline); margin: var(--space-16) 0;" aria-hidden="true"/>
-
-      <!-- Author attribution -->
+    <div class="container prose-container">
+      <article class="prose"><slot /></article>
       <div class="author-block" aria-label="Author information">
-        <p class="author-label" aria-hidden="true">Author</p>
+        <p class="author-label">Author</p>
         <p class="author-name">Chandra Kanojia</p>
-        <p class="author-title">Enterprise AI and Transformation Leader</p>
-        <p class="author-bio">
-          Career arc from global consulting to Fortune 100 buyer-side execution.
-          Focus: enterprise AI, CRM/Salesforce, workflow, regulated transformation,
-          and measurable operating outcomes.
-        </p>
-        <div style="margin-top: var(--space-6); display: flex; gap: var(--space-4); flex-wrap: wrap;">
-          <a href="/executive-profile" class="btn btn--ghost">View Executive Profile</a>
-          <a href="/insights" class="btn btn--text">More Insights</a>
-        </div>
+        <p class="author-bio">Enterprise AI and transformation operator focused on CRM/Salesforce, workflow, regulated operating models, and governed execution.</p>
       </div>
     </div>
   </section>
 </PageLayout>
-
-<style>
-.breadcrumb {
-  display: flex; align-items: center; list-style: none;
-  padding: 0; margin: 0 0 var(--space-8);
-  font-family: var(--font-mono); font-size: var(--text-mono);
-  letter-spacing: var(--ls-wide); color: var(--color-text-muted);
-}
-.breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--color-text-primary); }
-
-.author-block {
-  padding: var(--space-8);
-  background: var(--color-surface);
-  border: var(--border-thin);
-  border-radius: var(--radius-md);
-}
-.author-label {
-  font-family: var(--font-mono);
-  font-size: var(--text-mono);
-  letter-spacing: var(--ls-wider);
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-3);
-  max-width: none;
-}
-.author-name {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-1);
-  max-width: none;
-}
-.author-title {
-  font-size: var(--text-small);
-  color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  letter-spacing: var(--ls-wide);
-  margin-bottom: var(--space-4);
-  max-width: none;
-}
-.author-bio {
-  font-size: var(--text-small);
-  line-height: var(--lh-body);
-  color: var(--color-text-secondary);
-  max-width: none;
-}
-</style>
