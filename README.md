@@ -1,6 +1,6 @@
 # Chandra Kanojia — chandrakanojia.com
 
-This repository contains the static website for Chandra Kanojia's executive profile and thought leadership presence at chandrakanojia.com. The site is built with Astro and presents Chandra's work across enterprise AI execution, CRM/Salesforce, workflow transformation, regulated financial services, platform reliability, governance, and operating-model execution.
+This repository contains the static website for Chandra Kanojia's executive profile and thought leadership presence at chandrakanojia.com. The site is built with Astro and presents Chandra's work across enterprise AI, CRM/Salesforce, workflow transformation, regulated financial services, platform reliability, governance, and operating change.
 
 ## Design direction
 
@@ -12,7 +12,8 @@ The public site is intentionally disclosure-safe. It uses proof categories and i
 
 The site is mandate-shaped, not résumé-shaped:
 
-- Home: positioning, operating context, three executive mandates, selected point of view, mandate CTA.
+- Home: positioning, operating context, three executive mandates, AI Mandate Studio preview, selected point of view, mandate CTA.
+- AI Mandate Studio: curated, public-safe demonstration of how AI mandates translate into workflow, evidence, controls, adoption, and outcomes.
 - Executive Profile: summary, operating proof categories, mandates, career arc, education and development.
 - Enterprise AI: board-memo point of view on the shift from assistance to governed execution.
 - Insights: selected short-form operating notes.
@@ -44,6 +45,7 @@ npm run preview
 | Home | `/` |
 | Executive Profile | `/executive-profile` |
 | Enterprise AI | `/enterprise-ai-transformation` |
+| AI Mandate Studio | `/ai-mandate-studio` |
 | Insights | `/insights` |
 | Contact | `/contact` |
 | Privacy | `/privacy` |

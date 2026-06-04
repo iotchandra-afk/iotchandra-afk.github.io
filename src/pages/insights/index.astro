@@ -6,8 +6,8 @@ const webpageSchema = {
   '@type': 'CollectionPage',
   '@id': 'https://chandrakanojia.com/insights/#webpage',
   url: 'https://chandrakanojia.com/insights',
-  name: 'Insights | Chandra Kanojia',
-  description: 'Field notes on enterprise AI, CRM, workflow, and regulated operating change.',
+  name: 'Field Notes | Chandra Kanojia',
+  description: 'Field notes on enterprise AI, CRM, workflow, evidence, controls, and regulated operating change.',
   isPartOf: { '@id': 'https://chandrakanojia.com/#website' },
   about: { '@id': 'https://chandrakanojia.com/#person' }
 };
@@ -15,40 +15,60 @@ const webpageSchema = {
 const insights = [
   {
     tag: 'Enterprise AI',
-    title: 'AI Has Moved From Assistance to Execution. The Operating Model Has Not.',
+    title: 'AI Is Moving Faster Than the Enterprise.',
     href: '/insights/ai-moved-from-assistance-to-execution-operating-model-has-not',
-    desc: 'A board-level operating note on controlled autonomy, evidence discipline, and workflow ownership.'
+    desc: 'The technology is advancing quickly. The harder question is whether the enterprise can change work, governance, and decision-making fast enough to use it well.'
   },
   {
     tag: 'Controlled autonomy',
     title: 'Controlled Autonomy Is the Enterprise AI Product.',
     href: '/insights/controlled-autonomy-is-the-enterprise-ai-product',
-    desc: 'Why production AI needs routing, retrieval, validation, escalation, auditability, and clear permission boundaries.'
+    desc: 'The useful agent is not the one that does the most. It is the one that acts within the right boundaries and hands the work back at the right moment.'
   },
   {
     tag: 'CRM',
     title: 'The CRM Trap: When Systems of Record Never Become Systems of Action.',
     href: '/insights/crm-trap-systems-of-record-never-become-systems-of-action',
-    desc: 'CRM only creates value when it changes how work moves, decisions get made, and outcomes are governed.'
+    desc: 'CRM becomes valuable when it helps the enterprise decide what happens next. Recording activity is not enough.'
   }
 ];
 ---
 <PageLayout
-  title="Insights | Chandra Kanojia"
-  description="Field notes on enterprise AI, CRM, workflow, and regulated operating change."
+  title="Field Notes | Chandra Kanojia"
+  description="Field notes on enterprise AI, CRM, workflow, evidence, controls, and regulated operating change."
   canonical="https://chandrakanojia.com/insights"
   jsonLd={webpageSchema}
 >
   <section class="page-hero" aria-labelledby="insights-title">
     <div class="container narrow">
-      <p class="kicker">Insights</p>
-      <h1 id="insights-title">Field notes for the execution phase of enterprise AI.</h1>
-      <p class="lead">Short operating notes on AI execution, CRM/workflow systems, regulated change, and the work required after the demo.</p>
+      <p class="kicker">Field Notes</p>
+      <h1 id="insights-title">What large enterprises learn after the AI demo.</h1>
+      <p class="lead">The demo is the easy part. The harder question is what happens when AI enters real work: client conversations, advisor preparation, service workflows, CRM, case management, approvals, controls, exceptions, and leadership reporting.</p>
+      <p class="body-large" style="margin-top:1rem;">These notes come from that gap — the space between AI capability and operating change.</p>
     </div>
   </section>
 
-  <section class="section" aria-label="Insight articles">
+  <section class="section alt" aria-labelledby="seeing-title">
     <div class="container">
+      <div class="section-heading compact-heading">
+        <p class="kicker">What I keep seeing</p>
+        <h2 id="seeing-title">The work has to change before AI matters.</h2>
+      </div>
+      <div class="principles">
+        <article class="principle"><p>A better tool does not automatically create a better business process.</p></article>
+        <article class="principle"><p>A fluent answer is not a reliable decision. Leaders need to know what was used, what was missed, and what would change the conclusion.</p></article>
+        <article class="principle"><p>Useful AI acts where the permissions, controls, audit path, and human escalation are clear.</p></article>
+        <article class="principle"><p>The test is cycle time, capacity, experience, risk, and revenue velocity.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="notes-title">
+    <div class="container">
+      <div class="section-heading compact-heading">
+        <p class="kicker">Selected notes</p>
+        <h2 id="notes-title">One argument in three moves.</h2>
+      </div>
       <div class="insight-grid three">
         {insights.map(item => (
           <article class="insight-card">
@@ -57,6 +77,22 @@ const insights = [
             <p>{item.desc}</p>
           </article>
         ))}
+      </div>
+      <p class="insight-bridge">
+        Together, these are not separate technology topics. They point to a larger leadership mandate: how enterprises redesign work, decision-making, and operating models for an AI-driven economy.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section" aria-labelledby="insights-cta">
+    <div class="container">
+      <div class="cta-box mandate-cta">
+        <div>
+          <p class="panel-label">Discuss the mandate</p>
+          <h2 id="insights-cta">Useful conversations start when the question moves from “Can AI do this?” to “Can the enterprise change the work safely enough to make it matter?”</h2>
+          <p>Relevant conversations include AI execution, CRM and workflow modernization, operating leverage in regulated environments, platform reliability, adoption, governance, and executive confidence.</p>
+        </div>
+        <a class="button" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </div>
     </div>
   </section>
