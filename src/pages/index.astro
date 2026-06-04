@@ -6,8 +6,8 @@ const webpageSchema = {
   "@type": "WebPage",
   "@id": "https://chandrakanojia.com/#webpage",
   "url": "https://chandrakanojia.com",
-  "name": "Enterprise AI That Becomes Operating Leverage | Chandra Kanojia",
-  "description": "Chandra Kanojia helps large regulated enterprises convert AI, CRM/Salesforce, workflow, analytics, and platform investment into governed operating outcomes.",
+  "name": "Enterprise AI Transformation | Chandra Kanojia",
+  "description": "Chandra Kanojia helps large regulated enterprises turn AI, CRM/Salesforce, workflow, analytics, and platform investment into governed operating outcomes.",
   "isPartOf": { "@id": "https://chandrakanojia.com/#website" },
   "about": { "@id": "https://chandrakanojia.com/#person" }
 };
@@ -19,61 +19,71 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chandrakanojia.com" }
   ]
 };
+
+const metrics = [
+  ["7.2M+", "service cases managed"],
+  ["99.5%", "platform availability"],
+  ["$112M", "process-savings contribution"],
+  ["$500M+", "transformation-program scale"],
+  ["37%", "year-over-year growth supported"],
+  ["$10M–$300M", "pull-through deal influence"],
+  ["$15M–$20M", "delivery portfolio managed"],
+  ["$8M–$12M", "advisory revenue generated"]
+];
 ---
 
 <PageLayout
-  title="Enterprise AI That Becomes Operating Leverage | Chandra Kanojia"
-  description="Chandra Kanojia helps large regulated enterprises convert AI, CRM/Salesforce, workflow, analytics, and platform investment into governed operating outcomes."
+  title="Enterprise AI Transformation | Chandra Kanojia"
+  description="Chandra Kanojia helps large regulated enterprises turn AI, CRM/Salesforce, workflow, analytics, and platform investment into governed operating outcomes."
   jsonLd={[webpageSchema, breadcrumbSchema]}
 >
-  <section class="hero" aria-labelledby="hero-headline">
-    <div class="container">
-      <p class="hero-eyebrow" aria-hidden="true">Enterprise AI · CRM/Salesforce · Workflow · Regulated Operating Change</p>
-      <h1 class="hero-headline" id="hero-headline">Enterprise AI That Becomes<br />Operating Leverage.</h1>
-      <p class="hero-subheadline">
-        Chandra Kanojia helps large regulated enterprises convert AI, CRM/Salesforce,
-        workflow, analytics, and platform investment into governed operating outcomes.
-        The work sits where transformation usually breaks: workflow redesign, adoption,
-        platform reliability, decision rights, controls, and measurable business value.
+  <section class="hero compact-hero" aria-labelledby="hero-title">
+    <div class="container narrow">
+      <p class="eyebrow">Enterprise AI · CRM/Salesforce · Workflow · Regulated Transformation</p>
+      <h1 id="hero-title">Enterprise AI That Changes How Regulated Work Gets Done.</h1>
+      <p class="hero-copy">
+        Chandra Kanojia helps large regulated enterprises turn AI, CRM/Salesforce, workflow, analytics, and platform investment into governed operating outcomes.
+      </p>
+      <p class="hero-note">
+        The work sits where transformation usually breaks: workflow design, adoption, platform reliability, decision rights, controls, and measurable business value.
       </p>
       <div class="hero-actions">
-        <a href="/executive-profile" class="btn btn--primary">View Executive Profile</a>
-        <a href="/enterprise-ai-transformation" class="btn btn--ghost">Enterprise AI Perspective</a>
+        <a class="button primary" href="/executive-profile">View Executive Profile</a>
+        <a class="button secondary" href="/enterprise-ai-transformation">Read Enterprise AI View</a>
       </div>
     </div>
   </section>
 
-  <section class="metric-band" aria-label="Operating proof">
+  <section class="metric-section" aria-label="Operating proof">
     <div class="container">
-      <div class="metric-band-inner" role="list">
-        <div class="metric-cell" role="listitem"><span class="metric-value">7.2M+</span><span class="metric-label">Service cases managed</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">37%</span><span class="metric-label">Year-over-year growth supported</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">99.5%</span><span class="metric-label">Platform availability</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">$15M–$20M</span><span class="metric-label">Delivery portfolio</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">$500M+</span><span class="metric-label">Transformation-program scale</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">$112M</span><span class="metric-label">Process-savings contribution</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">$8M–$12M</span><span class="metric-label">Advisory revenue generated</span></div>
-        <div class="metric-cell" role="listitem"><span class="metric-value">$10M–$300M</span><span class="metric-label">Pull-through deal influence</span></div>
+      <div class="metric-grid">
+        {metrics.map(([value, label]) => (
+          <div class="metric-card">
+            <strong>{value}</strong>
+            <span>{label}</span>
+          </div>
+        ))}
       </div>
+      <p class="experience-line">Experience across Fidelity Investments, Accenture, Cognizant, Virtusa, Fortune 100 financial services, and global delivery environments.</p>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="lanes-heading">
+  <section class="section" aria-labelledby="lanes-title">
     <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Where the work lands</p>
-        <h2 class="section-title" id="lanes-heading">Three lanes where AI becomes operating leverage.</h2>
+      <div class="section-heading">
+        <p class="eyebrow">Where the work lands</p>
+        <h2 id="lanes-title">Three deployment lanes.</h2>
       </div>
-      <div class="theme-grid theme-grid--three" role="list">
-        <article class="theme-cell" role="listitem">
+      <div class="card-grid three">
+        <article class="card">
           <h3>Enterprise AI execution</h3>
           <p>Moving AI from pilots and demos into governed workflow patterns that business leaders can fund, adopt, and scale.</p>
         </article>
-        <article class="theme-cell" role="listitem">
+        <article class="card">
           <h3>CRM, workflow, and enterprise applications</h3>
           <p>Turning CRM, case management, analytics, advisor platforms, and workflow systems into operating leverage.</p>
         </article>
-        <article class="theme-cell" role="listitem">
+        <article class="card">
           <h3>Regulated transformation</h3>
           <p>Building change inside financial-services, insurance, retirement, brokerage, healthcare, risk, compliance, and control realities.</p>
         </article>
@@ -81,51 +91,34 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="section section--surface" aria-labelledby="quote-heading">
+  <section class="section muted" aria-labelledby="insights-title">
     <div class="container">
-      <div class="pull-quote-block" role="blockquote" aria-labelledby="quote-heading">
-        <h2 id="quote-heading" class="sr-only">Enterprise AI point of view</h2>
-        <p class="pull-quote-text">
-          The next enterprise AI advantage will not come from better demos. It will come from operating models that can absorb AI, govern it, and turn it into measurable work.
-        </p>
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Selected insights</p>
+          <h2 id="insights-title">Field notes on enterprise AI, CRM, workflow, and regulated operating change.</h2>
+        </div>
+        <a class="text-link" href="/insights">View all insights</a>
+      </div>
+      <div class="card-grid two">
+        <article class="insight-card">
+          <p class="card-kicker">Enterprise AI</p>
+          <h3><a href="/insights/ai-moved-from-assistance-to-execution-operating-model-has-not">AI Has Moved From Assistance to Execution. The Operating Model Has Not.</a></h3>
+          <p>A board-level operating note on controlled autonomy, evidence discipline, and workflow ownership.</p>
+        </article>
+        <article class="insight-card">
+          <p class="card-kicker">CRM</p>
+          <h3><a href="/insights/crm-trap-systems-of-record-never-become-systems-of-action">The CRM Trap: When Systems of Record Never Become Systems of Action.</a></h3>
+          <p>Why CRM transformation fails when workflow, data, decision rights, and adoption stay outside the operating design.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="insights-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Insights</p>
-        <h2 class="section-title" id="insights-heading">Field notes on enterprise AI, CRM, workflow, and regulated operating change.</h2>
-      </div>
-      <div class="insights-grid">
-        <a href="/insights/ai-moved-from-assistance-to-execution-operating-model-has-not" class="insight-card" aria-label="Read: AI Has Moved From Assistance to Execution. The Operating Model Has Not.">
-          <div class="insight-card-meta"><span class="insight-pillar">Enterprise AI</span><span class="insight-date">2025</span></div>
-          <h3>AI Has Moved From Assistance to Execution. The Operating Model Has Not.</h3>
-          <p>Deploying copilots is not the same as redesigning work. The harder problem is governed execution inside real enterprise systems.</p>
-          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
-        </a>
-        <a href="/insights/crm-trap-systems-of-record-never-become-systems-of-action" class="insight-card" aria-label="Read: The CRM Trap">
-          <div class="insight-card-meta"><span class="insight-pillar">CRM</span><span class="insight-date">2025</span></div>
-          <h3>The CRM Trap: When Systems of Record Never Become Systems of Action.</h3>
-          <p>CRM value shows up when relationship context, workflow, analytics, and execution discipline change how work moves.</p>
-          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--surface" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Connect</p>
-        <h2 class="section-title" id="cta-heading">For board, CXO, executive search, consulting, and enterprise AI conversations.</h2>
-        <p class="section-body">Connect directly on LinkedIn for the right mandate.</p>
-      </div>
-      <div class="hero-actions">
-        <a href="/contact" class="btn btn--primary">Connect on LinkedIn</a>
-        <a href="/executive-profile" class="btn btn--ghost">View Executive Profile</a>
-      </div>
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="container narrow">
+      <h2 id="cta-title">For board, CXO, executive search, consulting, and enterprise AI conversations.</h2>
+      <a class="button primary" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
   </section>
 </PageLayout>

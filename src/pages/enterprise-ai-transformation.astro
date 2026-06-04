@@ -4,10 +4,10 @@ import PageLayout from '../layouts/PageLayout.astro';
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://chandrakanojia.com/enterprise-ai-transformation#webpage",
+  "@id": "https://chandrakanojia.com/enterprise-ai-transformation/#webpage",
   "url": "https://chandrakanojia.com/enterprise-ai-transformation",
-  "name": "Enterprise AI Operating Model | Governed Execution in Regulated Enterprises",
-  "description": "A practical view on enterprise AI, agentic workflows, governance, CRM/Salesforce, workflow transformation, and measurable operating outcomes in regulated enterprises.",
+  "name": "Enterprise AI Operating Model | Chandra Kanojia",
+  "description": "A board-level view on enterprise AI, governed execution, human-agent workflow, CRM/Salesforce, platform reliability, and regulated operating outcomes.",
   "isPartOf": { "@id": "https://chandrakanojia.com/#website" },
   "about": { "@id": "https://chandrakanojia.com/#person" }
 };
@@ -24,105 +24,66 @@ const breadcrumbSchema = {
 
 <PageLayout
   title="Enterprise AI Operating Model | Governed Execution in Regulated Enterprises"
-  description="A practical view on enterprise AI, agentic workflows, governance, CRM/Salesforce, workflow transformation, and measurable operating outcomes in regulated enterprises."
+  description="A board-level view on enterprise AI, governed execution, human-agent workflow, CRM/Salesforce, platform reliability, and regulated operating outcomes."
+  canonical="https://chandrakanojia.com/enterprise-ai-transformation"
   jsonLd={[webpageSchema, breadcrumbSchema]}
 >
-  <section class="page-header" aria-labelledby="enterprise-ai-heading">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <ol class="breadcrumb" role="list">
-          <li><a href="/">Home</a></li>
-          <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
-          <li aria-current="page">Enterprise AI</li>
-        </ol>
-      </nav>
-      <h1 class="page-title" id="enterprise-ai-heading">Enterprise AI & Transformation</h1>
-      <p class="page-lede">
+  <section class="page-hero" aria-labelledby="enterprise-title">
+    <div class="container narrow">
+      <p class="eyebrow">Enterprise AI</p>
+      <h1 id="enterprise-title">AI transformation is moving from assistance to execution.</h1>
+      <p class="lead">
         Enterprise AI transformation is not a technology problem. It is an operating-model problem. The difference between programs that produce outcomes and programs that produce dashboards is execution discipline.
       </p>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="mandate-heading">
+  <section class="section" aria-labelledby="mandate-title">
+    <div class="container narrow">
+      <p class="eyebrow">Agentic Enterprise Mandate</p>
+      <h2 id="mandate-title">The next frontier is governed execution.</h2>
+      <p>
+        The next frontier will not be defined by how many copilots an enterprise deploys. It will be defined by how well the enterprise redesigns work so humans and agents can operate from the same context, permissions, workflows, controls, and outcome measures.
+      </p>
+      <p>
+        The advantage is not model access. The advantage is converting enterprise knowledge, policy, data, and judgment into governed execution at scale: reducing cycle time, creating capacity, strengthening controls, improving customer experience, and accelerating revenue velocity.
+      </p>
+    </div>
+  </section>
+
+  <section class="section muted" aria-labelledby="board-title">
+    <div class="container narrow board-callout">
+      <p class="eyebrow">For boards and executive teams</p>
+      <h2 id="board-title">The enterprise AI question has changed.</h2>
+      <p>
+        The question is no longer whether the technology can produce capability. The board-level question is whether management can govern the investment, redesign the work, control the risk, protect trust, and convert AI spend into measurable operating advantage.
+      </p>
+      <p>
+        That requires more than experimentation. It requires an operating model that can absorb AI.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="principles-title">
     <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">The Agentic Enterprise Mandate</p>
-        <h2 class="section-title" id="mandate-heading">AI transformation is moving from assistance to execution.</h2>
+      <div class="section-heading">
+        <p class="eyebrow">Operating principles</p>
+        <h2 id="principles-title">Four rules that survive the demo stage.</h2>
       </div>
-      <div class="prose">
-        <p>
-          The next frontier will not be defined by how many copilots an enterprise deploys. It will be defined by how well the enterprise redesigns work so humans and agents can operate from the same context, permissions, workflows, controls, and outcome measures.
-        </p>
-        <p>The advantage is not model access.</p>
-        <p>
-          The advantage is converting enterprise knowledge, policy, data, and judgment into governed execution at scale: reducing cycle time, creating capacity, strengthening controls, improving customer experience, and accelerating revenue velocity.
-        </p>
+      <div class="card-grid four">
+        <article class="principle-card"><p>The flashy demo is autonomy. The durable product is controlled autonomy.</p></article>
+        <article class="principle-card"><p>Long context is not memory. Evidence discipline is the control.</p></article>
+        <article class="principle-card"><p>Benchmarks are not work. Work has politics, risk, format, approval, and cleanup cost.</p></article>
+        <article class="principle-card"><p>The next moat is not prompt engineering. It is workflow ownership.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section section--surface" aria-labelledby="board-heading">
-    <div class="container">
-      <div class="board-block">
-        <p class="board-block-overline" aria-hidden="true">For Boards and Executive Teams</p>
-        <h2 id="board-heading">The enterprise AI question is no longer whether the technology can produce capability.</h2>
-        <p>
-          The board-level question is whether management can govern the investment, redesign the work, control the risk, protect trust, and convert AI spend into measurable operating advantage.
-        </p>
-        <p>
-          That requires more than experimentation. It requires an operating model that can absorb AI.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="principles-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Operating Principles</p>
-        <h2 class="section-title" id="principles-heading">Four controls that separate enterprise AI from theater.</h2>
-      </div>
-      <div class="principles-grid" role="list">
-        <article class="principle-card" role="listitem"><p class="principle-text">The flashy demo is autonomy. The durable product is controlled autonomy.</p></article>
-        <article class="principle-card" role="listitem"><p class="principle-text">Long context is not memory. Evidence discipline is the control.</p></article>
-        <article class="principle-card" role="listitem"><p class="principle-text">Benchmarks are not work. Work has politics, risk, format, approval, and cleanup cost.</p></article>
-        <article class="principle-card" role="listitem"><p class="principle-text">The next moat is not prompt engineering. It is workflow ownership.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--surface" aria-labelledby="experience-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Experience Map</p>
-        <h2 class="section-title" id="experience-heading">Where this perspective is grounded.</h2>
-      </div>
-      <div class="theme-grid" role="list">
-        <article class="theme-cell" role="listitem"><h3>AI and platform</h3><p>AI-enabled relationship intelligence, CRM analytics, governance, and adoption architecture inside regulated financial services.</p></article>
-        <article class="theme-cell" role="listitem"><h3>CRM and service</h3><p>Salesforce CRM, service-platform modernization, case management, workflow redesign, and platform reliability at enterprise scale.</p></article>
-        <article class="theme-cell" role="listitem"><h3>Workflow and cost</h3><p>Cost-to-serve reduction, process savings, advisor and associate productivity, and measurable operating outcomes.</p></article>
-        <article class="theme-cell" role="listitem"><h3>Regulated breadth</h3><p>Insurance, retirement, wealth, brokerage, healthcare, underwriting, claims, and multi-country transformation.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="ai-cta-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Connect</p>
-        <h2 class="section-title" id="ai-cta-heading">Enterprise AI and transformation mandates at regulated-institution scale require operating proof.</h2>
-        <p class="section-body">Connect on LinkedIn to discuss the mandate.</p>
-      </div>
-      <div class="hero-actions">
-        <a href="/contact" class="btn btn--primary">Connect on LinkedIn</a>
-        <a href="/executive-profile" class="btn btn--ghost">View Executive Profile</a>
-      </div>
+  <section class="cta-section" aria-labelledby="enterprise-cta-title">
+    <div class="container narrow">
+      <h2 id="enterprise-cta-title">Enterprise AI mandates require operating proof.</h2>
+      <p>For regulated-institution scale, the work has to connect strategy, governance, platforms, workflow, adoption, and measurable outcomes.</p>
+      <a class="button primary" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
   </section>
 </PageLayout>
-
-<style>
-.breadcrumb { display: flex; align-items: center; list-style: none; padding: 0; margin: 0 0 var(--space-8); font-family: var(--font-mono); font-size: var(--text-mono); letter-spacing: var(--ls-wide); color: var(--color-text-muted); }
-.breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--color-text-primary); }
-</style>

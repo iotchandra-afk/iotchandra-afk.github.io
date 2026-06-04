@@ -4,9 +4,9 @@ import PageLayout from '../../layouts/PageLayout.astro';
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://chandrakanojia.com/insights#webpage",
+  "@id": "https://chandrakanojia.com/insights/#webpage",
   "url": "https://chandrakanojia.com/insights",
-  "name": "AI Insights for Regulated Enterprise Transformation | Chandra Kanojia",
+  "name": "Insights | Chandra Kanojia",
   "description": "Field notes on enterprise AI, CRM, workflow, and regulated operating change.",
   "isPartOf": { "@id": "https://chandrakanojia.com/#website" },
   "about": { "@id": "https://chandrakanojia.com/#person" }
@@ -21,27 +21,24 @@ const breadcrumbSchema = {
   ]
 };
 
-const articles = [
+const posts = [
   {
-    href: '/insights/ai-moved-from-assistance-to-execution-operating-model-has-not',
-    pillar: 'Enterprise AI',
-    date: '2025',
-    title: 'AI Has Moved From Assistance to Execution. The Operating Model Has Not.',
-    desc: 'Deploying copilots is not the same as redesigning work. The enterprise moat is workflow ownership.'
+    title: "AI Has Moved From Assistance to Execution. The Operating Model Has Not.",
+    tag: "Enterprise AI",
+    href: "/insights/ai-moved-from-assistance-to-execution-operating-model-has-not",
+    summary: "A board-level operating note on controlled autonomy, evidence discipline, and workflow ownership."
   },
   {
-    href: '/insights/enterprise-ai-fails-when-operating-model-cannot-absorb-it',
-    pillar: 'Operating Models',
-    date: '2025',
-    title: 'Enterprise AI Fails When the Operating Model Cannot Absorb It',
-    desc: 'The dominant failure mode in enterprise AI is not technical. It is the gap between technology capability and operating absorption.'
+    title: "Enterprise AI Fails When the Operating Model Cannot Absorb It.",
+    tag: "Operating Model",
+    href: "/insights/enterprise-ai-fails-when-operating-model-cannot-absorb-it",
+    summary: "Why governance, adoption, and execution discipline matter more than a larger pilot portfolio."
   },
   {
-    href: '/insights/crm-trap-systems-of-record-never-become-systems-of-action',
-    pillar: 'CRM',
-    date: '2025',
-    title: 'The CRM Trap: When Systems of Record Never Become Systems of Action.',
-    desc: 'CRM value shows up when relationship context, workflow, analytics, and execution discipline change how work moves.'
+    title: "The CRM Trap: When Systems of Record Never Become Systems of Action.",
+    tag: "CRM",
+    href: "/insights/crm-trap-systems-of-record-never-become-systems-of-action",
+    summary: "CRM transformation fails when workflow, data, decision rights, and adoption stay outside the operating design."
   }
 ];
 ---
@@ -49,40 +46,35 @@ const articles = [
 <PageLayout
   title="AI Insights for Regulated Enterprise Transformation | Chandra Kanojia"
   description="Field notes on enterprise AI, CRM, workflow, and regulated operating change."
+  canonical="https://chandrakanojia.com/insights"
   jsonLd={[webpageSchema, breadcrumbSchema]}
 >
-  <section class="page-header" aria-labelledby="insights-heading">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <ol class="breadcrumb" role="list">
-          <li><a href="/">Home</a></li>
-          <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
-          <li aria-current="page">Insights</li>
-        </ol>
-      </nav>
-      <h1 class="page-title" id="insights-heading">Insights.</h1>
-      <p class="page-lede">Field notes on enterprise AI, CRM, workflow, and regulated operating change.</p>
+  <section class="page-hero" aria-labelledby="insights-title">
+    <div class="container narrow">
+      <p class="eyebrow">Insights</p>
+      <h1 id="insights-title">Field notes on enterprise AI, CRM, workflow, and regulated operating change.</h1>
     </div>
   </section>
 
   <section class="section" aria-label="Insight articles">
     <div class="container">
-      <div class="insights-grid">
-        {articles.map(article => (
-          <a href={article.href} class="insight-card" aria-label={`Read: ${article.title}`}>
-            <div class="insight-card-meta"><span class="insight-pillar">{article.pillar}</span><span class="insight-date">{article.date}</span></div>
-            <h3>{article.title}</h3>
-            <p>{article.desc}</p>
-            <span class="insight-card-arrow" aria-hidden="true">Read →</span>
-          </a>
+      <div class="card-grid three">
+        {posts.map(post => (
+          <article class="insight-card">
+            <p class="card-kicker">{post.tag}</p>
+            <h2><a href={post.href}>{post.title}</a></h2>
+            <p>{post.summary}</p>
+          </article>
         ))}
       </div>
     </div>
   </section>
-</PageLayout>
 
-<style>
-.breadcrumb { display: flex; align-items: center; list-style: none; padding: 0; margin: 0 0 var(--space-8); font-family: var(--font-mono); font-size: var(--text-mono); letter-spacing: var(--ls-wide); color: var(--color-text-muted); }
-.breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--color-text-primary); }
-</style>
+  <section class="cta-section small" aria-labelledby="insights-cta-title">
+    <div class="container narrow">
+      <h2 id="insights-cta-title">Selected commentary will remain curated.</h2>
+      <p>LinkedIn commentary can be linked selectively later without turning this site into a live feed.</p>
+      <a class="button secondary" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+    </div>
+  </section>
+</PageLayout>
