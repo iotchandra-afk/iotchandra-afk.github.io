@@ -1,0 +1,135 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import DiscussCTA from '../components/DiscussCTA.astro';
+
+const webpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.chandrakanojia.com/#webpage',
+  url: 'https://www.chandrakanojia.com',
+  name: 'Enterprise AI, Data and CRM Transformation | Chandra Kanojia',
+  description: 'Official website of Chandra Kanojia, an enterprise AI and platform transformation executive focused on governed workflows, CRM, operating intelligence, and financial services transformation.',
+  isPartOf: { '@id': 'https://www.chandrakanojia.com/#website' },
+  about: { '@id': 'https://www.chandrakanojia.com/#chandra-kanojia' }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.chandrakanojia.com' }
+  ]
+};
+---
+<PageLayout
+  title="Enterprise AI, Data and CRM Transformation | Chandra Kanojia"
+  description="Official website of Chandra Kanojia, an enterprise AI and platform transformation executive focused on governed workflows, CRM, operating intelligence, and financial services transformation."
+  ogImage="/images/og-home.png"
+  jsonLd={[webpageSchema, breadcrumbSchema]}
+>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-single">
+      <span class="identity-mark hero-mark" aria-hidden="true"><span></span></span>
+      <p class="kicker">Enterprise AI · Data · CRM/Salesforce · Workflow · Regulated Change</p>
+      <h1 id="hero-title">Enterprise AI has entered the execution phase.</h1>
+      <p class="lead hero-copy">
+        Chandra Kanojia helps large regulated enterprises make AI useful inside real work: trusted data, CRM/Salesforce, workflow, analytics, service platforms, controls, and operating routines.
+      </p>
+      <p class="credibility-line">
+        The demo is easy. The data and work are hard.
+      </p>
+      <p class="official-line">
+        This is the official website of Chandra Kanojia. Chandra Kanojia is an enterprise AI and platform transformation executive focused on governed workflows, CRM, operating intelligence, and financial services transformation.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/executive-profile">View Executive Profile</a>
+        <a class="button secondary" href="/enterprise-ai-transformation">Read Enterprise AI Point of View</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact" aria-labelledby="authority-title">
+    <div class="container">
+      <div class="authority-band">
+        <p class="band-label" id="authority-title">Operating proof spans</p>
+        <p>
+          Regulated financial services · data readiness for AI · Salesforce/CRM modernization · enterprise workflow · service and advisor platforms · analytics and governance · platform reliability · insurance, retirement, brokerage, healthcare, claims, and global consulting transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="mandates-title">
+    <div class="container">
+      <div class="section-heading compact-heading">
+        <p class="kicker">Where Chandra creates leverage</p>
+        <h2 id="mandates-title">The work has to change before AI matters.</h2>
+      </div>
+      <div class="mandate-grid">
+        <article class="mandate-card">
+          <span>01</span>
+          <h3>Make AI useful beyond the demo</h3>
+          <p>Move AI from pilots into real workflows with clear ownership, evidence, controls, adoption paths, and business accountability.</p>
+        </article>
+        <article class="mandate-card">
+          <span>02</span>
+          <h3>Modernize the systems where work moves</h3>
+          <p>Improve CRM, case management, analytics, service platforms, and workflow systems so they guide action instead of only storing activity.</p>
+        </article>
+        <article class="mandate-card">
+          <span>03</span>
+          <h3>Turn data into decision context</h3>
+          <p>Make trusted data available at the point of work, where people, systems, and AI have to decide what happens next.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="briefings-title">
+    <div class="container two-column-feature">
+      <div class="section-heading compact-heading">
+        <p class="kicker">Executive briefings</p>
+        <h2 id="briefings-title">A practical conversation for boards and leadership teams.</h2>
+        <p>
+          The useful AI conversation has moved past demos. Boards and executive teams now need to ask whether the enterprise can change the work, trust the data, control the risk, and see the value.
+        </p>
+        <a class="button primary" href="/executive-briefings">View Briefing Topics</a>
+      </div>
+      <div class="content-stack">
+        <article class="content-panel"><h3>AI after the demo</h3><p>What changes when AI moves from assistance to execution.</p></article>
+        <article class="content-panel"><h3>The data problem under AI strategy</h3><p>Why trusted context at the point of work matters more than another dashboard.</p></article>
+        <article class="content-panel"><h3>CRM as a system of action</h3><p>Why the next CRM advantage is better decisions and follow-through, not more data capture.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="insights-title">
+    <div class="container">
+      <div class="section-heading">
+        <div class="intro">
+          <p class="kicker">Field Notes</p>
+          <h2 id="insights-title">What large enterprises learn after the AI demo.</h2>
+        </div>
+        <a class="text-link" href="/insights">View Field Notes</a>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <p class="tag">Enterprise AI</p>
+          <h3><a href="/insights/ai-moved-from-assistance-to-execution-operating-model-has-not">AI Is Moving Faster Than the Enterprise.</a></h3>
+          <p>The technology is moving quickly. The harder question is whether the enterprise can change work, governance, data, and decision-making fast enough to use it well.</p>
+        </article>
+        <article class="insight-card">
+          <p class="tag">Data</p>
+          <h3><a href="/insights/data-problem-hiding-under-every-ai-strategy">The Data Problem Hiding Under Every AI Strategy.</a></h3>
+          <p>Most AI plans talk about models. The harder question is whether trusted context reaches the workflow when a decision has to happen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <DiscussCTA
+    id="cta-title"
+    eyebrow="Discuss the mandate"
+    title="The useful conversation starts after the demo."
+    body="Talk to Chandra about making AI work inside regulated environments: trusted data, CRM/Salesforce, workflow, controls, adoption, and measurable business value."
+  />
+</PageLayout>
