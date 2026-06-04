@@ -1,13 +1,13 @@
 ---
-// enterprise-ai-transformation.astro
 import PageLayout from '../layouts/PageLayout.astro';
 
 const webpageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": "https://chandrakanojia.com/enterprise-ai-transformation#webpage",
   "url": "https://chandrakanojia.com/enterprise-ai-transformation",
-  "name": "Enterprise AI Operating Model | Governed Execution in Regulated Enterprises | Chandra Kanojia",
-  "description": "Moving enterprise AI from pilots and demos into governed operating outcomes. Chandra Kanojia on AI operating models, human-agent workflow redesign, regulated-enterprise execution, and measurable business value.",
+  "name": "Enterprise AI Operating Model | Governed Execution in Regulated Enterprises",
+  "description": "A practical view on enterprise AI, agentic workflows, governance, CRM/Salesforce, workflow transformation, and measurable operating outcomes in regulated enterprises.",
   "isPartOf": { "@id": "https://chandrakanojia.com/#website" },
   "about": { "@id": "https://chandrakanojia.com/#person" }
 };
@@ -17,342 +17,101 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chandrakanojia.com" },
-    { "@type": "ListItem", "position": 2, "name": "Enterprise AI & Transformation", "item": "https://chandrakanojia.com/enterprise-ai-transformation" }
+    { "@type": "ListItem", "position": 2, "name": "Enterprise AI", "item": "https://chandrakanojia.com/enterprise-ai-transformation" }
   ]
 };
 ---
 
 <PageLayout
-  title="Enterprise AI Operating Model | Governed Execution in Regulated Enterprises | Chandra Kanojia"
-  description="Moving enterprise AI from pilots and demos into governed operating outcomes. Chandra Kanojia on AI operating models, human-agent workflow redesign, regulated-enterprise execution, and measurable business value."
+  title="Enterprise AI Operating Model | Governed Execution in Regulated Enterprises"
+  description="A practical view on enterprise AI, agentic workflows, governance, CRM/Salesforce, workflow transformation, and measurable operating outcomes in regulated enterprises."
   jsonLd={[webpageSchema, breadcrumbSchema]}
 >
-
-  <!-- ═══ PAGE HEADER ═══ -->
-  <section class="page-header" aria-labelledby="ai-heading">
+  <section class="page-header" aria-labelledby="enterprise-ai-heading">
     <div class="container">
       <nav aria-label="Breadcrumb">
         <ol class="breadcrumb" role="list">
           <li><a href="/">Home</a></li>
           <li aria-hidden="true" style="color: var(--color-text-muted); margin: 0 0.5rem;">·</li>
-          <li aria-current="page">Enterprise AI & Transformation</li>
+          <li aria-current="page">Enterprise AI</li>
         </ol>
       </nav>
-      <h1 class="page-title" id="ai-heading">
-        Enterprise AI<br/>& Transformation.
-      </h1>
+      <h1 class="page-title" id="enterprise-ai-heading">Enterprise AI & Transformation</h1>
       <p class="page-lede">
-        Enterprise AI transformation is not a technology problem. It is an operating-model
-        problem. The difference between programs that produce outcomes and programs that
-        produce dashboards is execution discipline.
+        Enterprise AI transformation is not a technology problem. It is an operating-model problem. The difference between programs that produce outcomes and programs that produce dashboards is execution discipline.
       </p>
     </div>
   </section>
 
-  <!-- ═══ ENTERPRISE MANDATE BLOCK ═══ -->
-  <section class="section section--surface" aria-labelledby="agentic-heading">
+  <section class="section" aria-labelledby="mandate-heading">
     <div class="container">
-      <div class="om-grid">
-        <div class="om-label" aria-hidden="true">Mandate</div>
-        <div class="om-content">
-          <div class="section-header">
-            <p class="section-overline" aria-hidden="true">The Agentic Enterprise Mandate</p>
-            <h2 class="section-title" id="agentic-heading">
-              AI transformation is moving from assistance to execution.
-            </h2>
-          </div>
-          <div class="prose">
-            <p>
-              The next frontier will not be defined by how many copilots an enterprise
-              deploys. It will be defined by how well the enterprise redesigns work so
-              humans and agents can operate from the same context, permissions, workflows,
-              controls, and outcome measures.
-            </p>
-            <p>
-              The advantage is not model access.
-            </p>
-            <p>
-              The advantage is converting enterprise knowledge, policy, data, and judgment
-              into governed execution at scale — reducing cycle time, creating capacity,
-              strengthening controls, improving customer experience, and accelerating
-              revenue velocity.
-            </p>
-          </div>
-        </div>
+      <div class="section-header">
+        <p class="section-overline" aria-hidden="true">The Agentic Enterprise Mandate</p>
+        <h2 class="section-title" id="mandate-heading">AI transformation is moving from assistance to execution.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The next frontier will not be defined by how many copilots an enterprise deploys. It will be defined by how well the enterprise redesigns work so humans and agents can operate from the same context, permissions, workflows, controls, and outcome measures.
+        </p>
+        <p>The advantage is not model access.</p>
+        <p>
+          The advantage is converting enterprise knowledge, policy, data, and judgment into governed execution at scale: reducing cycle time, creating capacity, strengthening controls, improving customer experience, and accelerating revenue velocity.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ═══ OPERATING PRINCIPLES (LOCKED) ═══ -->
+  <section class="section section--surface" aria-labelledby="board-heading">
+    <div class="container">
+      <div class="board-block">
+        <p class="board-block-overline" aria-hidden="true">For Boards and Executive Teams</p>
+        <h2 id="board-heading">The enterprise AI question is no longer whether the technology can produce capability.</h2>
+        <p>
+          The board-level question is whether management can govern the investment, redesign the work, control the risk, protect trust, and convert AI spend into measurable operating advantage.
+        </p>
+        <p>
+          That requires more than experimentation. It requires an operating model that can absorb AI.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="principles-heading">
     <div class="container">
       <div class="section-header">
         <p class="section-overline" aria-hidden="true">Operating Principles</p>
-        <h2 class="section-title" id="principles-heading" class="sr-only">Four operating principles for enterprise AI</h2>
+        <h2 class="section-title" id="principles-heading">Four controls that separate enterprise AI from theater.</h2>
       </div>
       <div class="principles-grid" role="list">
-        <div class="principle-card" role="listitem">
-          <p class="principle-mark" aria-hidden="true">01</p>
-          <p class="principle-text">The flashy demo is autonomy. The durable product is controlled autonomy.</p>
-        </div>
-        <div class="principle-card" role="listitem">
-          <p class="principle-mark" aria-hidden="true">02</p>
-          <p class="principle-text">Long context is not memory. Evidence discipline is the control.</p>
-        </div>
-        <div class="principle-card" role="listitem">
-          <p class="principle-mark" aria-hidden="true">03</p>
-          <p class="principle-text">Benchmarks are not work. Work has politics, risk, format, approval, and cleanup cost.</p>
-        </div>
-        <div class="principle-card" role="listitem">
-          <p class="principle-mark" aria-hidden="true">04</p>
-          <p class="principle-text">The next moat is not prompt engineering. It is workflow ownership.</p>
-        </div>
+        <article class="principle-card" role="listitem"><p class="principle-text">The flashy demo is autonomy. The durable product is controlled autonomy.</p></article>
+        <article class="principle-card" role="listitem"><p class="principle-text">Long context is not memory. Evidence discipline is the control.</p></article>
+        <article class="principle-card" role="listitem"><p class="principle-text">Benchmarks are not work. Work has politics, risk, format, approval, and cleanup cost.</p></article>
+        <article class="principle-card" role="listitem"><p class="principle-text">The next moat is not prompt engineering. It is workflow ownership.</p></article>
       </div>
     </div>
   </section>
 
-  <hr class="section-rule" aria-hidden="true" style="margin: 0;"/>
-
-  <!-- ═══ WHAT ENTERPRISE AI ACTUALLY REQUIRES ═══ -->
-  <section class="section" aria-labelledby="reality-heading">
-    <div class="container">
-      <div class="om-grid">
-        <div class="om-label" aria-hidden="true">Reality</div>
-        <div class="om-content">
-          <div class="section-header">
-            <p class="section-overline" aria-hidden="true">What Enterprise AI Actually Requires</p>
-            <h2 class="section-title" id="reality-heading">
-              Three components. Built together, not sequentially.
-            </h2>
-          </div>
-          <div class="prose">
-            <p>
-              Enterprise AI programs in regulated financial services face a compounding
-              challenge that general AI adoption frameworks do not address. The technology
-              is available. The use cases are identifiable. The budget is often in place.
-              What is missing is the organizational infrastructure to absorb the change.
-            </p>
-          </div>
-
-          <div class="theme-grid" role="list" style="margin-top: var(--space-10);">
-            <article class="theme-cell" role="listitem">
-              <p class="theme-cell-label" aria-hidden="true">Component 01</p>
-              <h3>Governance That Decides Fast</h3>
-              <p>Decision latency kills transformation value. Regulated AI requires precise governance — not slow governance. Clear accountability, defined decision rights, and escalation paths that move at transformation speed.</p>
-            </article>
-            <article class="theme-cell" role="listitem">
-              <p class="theme-cell-label" aria-hidden="true">Component 02</p>
-              <h3>Adoption That Changes Behavior</h3>
-              <p>Adoption is not a training program. It is a workflow design problem. The behavior changes when the path of least resistance is the right behavior — which requires redesigning the work, not communicating about the change.</p>
-            </article>
-            <article class="theme-cell" role="listitem">
-              <p class="theme-cell-label" aria-hidden="true">Component 03</p>
-              <h3>Execution That Measures Outcomes</h3>
-              <p>Strategy documents do not transform organizations. Accountability architectures do. Every program needs a clear owner per outcome, a measurement framework defined before delivery begins, and a review cadence that surfaces reality fast.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" aria-hidden="true" style="margin: 0;"/>
-
-  <!-- ═══ WHY PROGRAMS FAIL ═══ -->
-  <section class="section section--surface" aria-labelledby="failure-heading">
-    <div class="container">
-      <div class="om-grid">
-        <div class="om-label" aria-hidden="true">Operating Lens</div>
-        <div class="om-content">
-          <div class="section-header">
-            <p class="section-overline" aria-hidden="true">Why Programs Fail</p>
-            <h2 class="section-title" id="failure-heading">
-              Four failure modes. None of them primarily technical.
-            </h2>
-          </div>
-          <div class="prose">
-            <p>
-              Across more than a decade of enterprise AI and transformation programs,
-              four failure modes appear consistently.
-            </p>
-            <h2>1. The operating model was never redesigned.</h2>
-            <p>
-              Most programs deploy AI into an existing operating model and expect the
-              outcomes to change. They do not. AI is a new input that requires a new
-              model. Programs that skip operating-model redesign produce better automation
-              of the wrong process.
-            </p>
-            <h2>2. Governance was too slow or too diffuse.</h2>
-            <p>
-              Compliance governance and transformation governance are different structures
-              with different decision rhythms. Programs that run transformation through
-              compliance frameworks stall. Programs that bypass governance create risk.
-              The right architecture is both fast and precise.
-            </p>
-            <h2>3. Adoption was treated as a communications problem.</h2>
-            <p>
-              The problem is not awareness — it is behavior. Behavior changes when the
-              workflow changes. Programs that invest in workflow redesign before
-              communications produce durable adoption. Programs that reverse the order
-              produce compliance without change.
-            </p>
-            <h2>4. Outcomes were not defined before delivery began.</h2>
-            <p>
-              Programs that survive scrutiny define success measures before the first
-              sprint — not after the pilot completes. That means distinguishing output
-              measures from outcome measures and holding the program accountable for
-              the latter.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ REGULATED-ENTERPRISE CONTEXT ═══ -->
-  <section class="section" aria-labelledby="regulated-heading">
-    <div class="container">
-      <div class="om-grid">
-        <div class="om-label" aria-hidden="true">Signal</div>
-        <div class="om-content">
-          <div class="section-header">
-            <p class="section-overline" aria-hidden="true">The Regulated-Enterprise Context</p>
-            <h2 class="section-title" id="regulated-heading">
-              Regulated-industry transformation is a different discipline.
-            </h2>
-          </div>
-          <div class="prose">
-            <p>
-              Financial services, insurance, and retirement transformation operates inside
-              constraints most AI frameworks were not designed for: model risk management,
-              data residency, fiduciary obligations, examination-readiness requirements,
-              and multi-jurisdictional regulatory timelines that conflict with each other.
-            </p>
-            <p>
-              These constraints are not obstacles. They are design inputs. Organizations
-              that treat them as obstacles build compliance-fragile programs. Organizations
-              that treat them as design inputs build programs that are both faster and more
-              durable — because the compliance architecture is built in, not bolted on.
-            </p>
-            <p>
-              This perspective comes from operating across regulated financial services,
-              CRM/Salesforce, workflow, analytics, platform reliability, and global
-              consulting environments.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" aria-hidden="true" style="margin: 0;"/>
-
-  <!-- ═══ BOARD BLOCK (LOCKED) ═══ -->
-  <section class="section" aria-labelledby="board-heading">
-    <div class="container">
-      <div class="board-block">
-        <p class="board-block-overline" aria-hidden="true">For Boards and Executive Teams</p>
-        <h2 id="board-heading">
-          The enterprise AI question is no longer whether the technology can produce capability.
-        </h2>
-        <p>
-          The board-level question is whether management can govern the investment,
-          redesign the work, control the risk, protect trust, and convert AI spend
-          into measurable operating advantage.
-        </p>
-        <p>
-          That requires more than experimentation. It requires an operating model
-          that can absorb AI.
-        </p>
-        <div style="margin-top: var(--space-8);">
-          <a href="/contact" class="btn btn--primary">Connect on LinkedIn</a>
-          <a href="/executive-profile" class="btn btn--ghost" style="margin-left: var(--space-4);">Executive Profile →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EXPERIENCE MAP ═══ -->
-  <section class="section section--surface" aria-labelledby="relevance-heading">
+  <section class="section section--surface" aria-labelledby="experience-heading">
     <div class="container">
       <div class="section-header">
         <p class="section-overline" aria-hidden="true">Experience Map</p>
-        <h2 class="section-title" id="relevance-heading">
-          Where the operating record connects to the enterprise AI mandate.
-        </h2>
+        <h2 class="section-title" id="experience-heading">Where this perspective is grounded.</h2>
       </div>
-
-      <div class="proof-vignettes">
-        <article class="proof-vignette">
-          <p class="proof-vignette-tag" aria-hidden="true">AI & Platform</p>
-          <h3>AI-Enabled Relationship Intelligence</h3>
-          <p>Built the operating infrastructure for AI-enabled relationship intelligence and CRM analytics inside a major wealth management platform — from governance design through adoption architecture to measurable commercial outcomes including 37% year-over-year growth.</p>
-        </article>
-
-        <article class="proof-vignette">
-          <p class="proof-vignette-tag" aria-hidden="true">CRM & Service</p>
-          <h3>Salesforce CRM at Enterprise Scale</h3>
-          <p>Led CRM and service-platform modernization — 7.2M+ service cases managed, 99.5% platform availability — delivering governance, workflow redesign, and adoption infrastructure that converted platform investment into operating performance.</p>
-        </article>
-
-        <article class="proof-vignette">
-          <p class="proof-vignette-tag" aria-hidden="true">Workflow & Cost</p>
-          <h3>$112M Process-Savings Contribution</h3>
-          <p>Workflow transformation and cost-to-serve programs that reduced operating friction while improving associate and advisor productivity — $112M in process-savings contribution across regulated financial services operations.</p>
-        </article>
-
-        <article class="proof-vignette">
-          <p class="proof-vignette-tag" aria-hidden="true">Multi-Sector</p>
-          <h3>Regulated Financial Services Breadth</h3>
-          <p>Operating experience across insurance, retirement, wealth, brokerage, and healthcare — in US, UK, German, and South Asian regulatory contexts. $500M+ transformation-program scale with consistent governance architecture.</p>
-        </article>
+      <div class="theme-grid" role="list">
+        <article class="theme-cell" role="listitem"><h3>AI and platform</h3><p>AI-enabled relationship intelligence, CRM analytics, governance, and adoption architecture inside regulated financial services.</p></article>
+        <article class="theme-cell" role="listitem"><h3>CRM and service</h3><p>Salesforce CRM, service-platform modernization, case management, workflow redesign, and platform reliability at enterprise scale.</p></article>
+        <article class="theme-cell" role="listitem"><h3>Workflow and cost</h3><p>Cost-to-serve reduction, process savings, advisor and associate productivity, and measurable operating outcomes.</p></article>
+        <article class="theme-cell" role="listitem"><h3>Regulated breadth</h3><p>Insurance, retirement, wealth, brokerage, healthcare, underwriting, claims, and multi-country transformation.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- ═══ RELATED INSIGHTS ═══ -->
-  <section class="section" aria-labelledby="related-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-overline" aria-hidden="true">Related Insights</p>
-        <h2 class="section-title" id="related-heading">From the Insights archive.</h2>
-      </div>
-      <div class="insights-grid">
-        <a href="/insights/ai-moved-from-assistance-to-execution-operating-model-has-not" class="insight-card">
-          <div class="insight-card-meta">
-            <span class="insight-pillar">Enterprise AI</span>
-            <span class="insight-date">2025</span>
-          </div>
-          <h3>AI Has Moved From Assistance to Execution. The Operating Model Has Not.</h3>
-          <p>Deploying copilots is not the same as redesigning work. The board question is direct: can management convert AI spend into governed operating advantage?</p>
-          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
-        </a>
-        <a href="/insights/enterprise-ai-fails-when-operating-model-cannot-absorb-it" class="insight-card">
-          <div class="insight-card-meta">
-            <span class="insight-pillar">Operating Models</span>
-            <span class="insight-date">2025</span>
-          </div>
-          <h3>Enterprise AI Fails When the Operating Model Cannot Absorb It</h3>
-          <p>The dominant failure mode in enterprise AI is not technical. It is organizational. Here is the anatomy of the failure — and what the fix actually requires.</p>
-          <span class="insight-card-arrow" aria-hidden="true">Read →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ CTA ═══ -->
-  <section class="section section--surface" aria-labelledby="ai-cta-heading">
+  <section class="section" aria-labelledby="ai-cta-heading">
     <div class="container">
       <div class="section-header">
         <p class="section-overline" aria-hidden="true">Connect</p>
-        <h2 class="section-title" id="ai-cta-heading">
-          Ready to discuss the mandate.
-        </h2>
-        <p class="section-body">
-          Enterprise AI and transformation mandates at regulated-institution scale
-          require specific operating experience. Connect on LinkedIn to discuss
-          whether the fit is right.
-        </p>
+        <h2 class="section-title" id="ai-cta-heading">Enterprise AI and transformation mandates at regulated-institution scale require operating proof.</h2>
+        <p class="section-body">Connect on LinkedIn to discuss the mandate.</p>
       </div>
       <div class="hero-actions">
         <a href="/contact" class="btn btn--primary">Connect on LinkedIn</a>
@@ -360,20 +119,10 @@ const breadcrumbSchema = {
       </div>
     </div>
   </section>
-
 </PageLayout>
 
 <style>
-.breadcrumb {
-  display: flex; align-items: center; list-style: none;
-  padding: 0; margin: 0 0 var(--space-8);
-  font-family: var(--font-mono); font-size: var(--text-mono);
-  letter-spacing: var(--ls-wide); color: var(--color-text-muted);
-}
+.breadcrumb { display: flex; align-items: center; list-style: none; padding: 0; margin: 0 0 var(--space-8); font-family: var(--font-mono); font-size: var(--text-mono); letter-spacing: var(--ls-wide); color: var(--color-text-muted); }
 .breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--color-text-primary); }
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0;
-  margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
-}
 </style>

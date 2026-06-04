@@ -139,7 +139,7 @@ const allSchemas = [personSchema, websiteSchema, ...(jsonLd ? (Array.isArray(jso
   <script is:inline>
     (function() {
       const saved = localStorage.getItem('ck-theme');
-      const theme = saved || 'dark';
+      const theme = saved || 'light';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>

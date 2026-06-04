@@ -1557,3 +1557,50 @@ main {
   max-width: none;
   margin: 0;
 }
+
+/* ---------- FINAL READABILITY PASS ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.theme-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .theme-grid--three { grid-template-columns: 1fr; }
+}
+
+.article-body .container--prose,
+.article-header .container--prose {
+  max-width: 760px;
+}
+
+.article-body { padding-top: var(--space-12); }
+
+.prose h2 {
+  display: block;
+  margin-top: var(--space-14, 3.5rem);
+  margin-bottom: var(--space-5);
+  line-height: 1.25;
+}
+
+.prose p + h2 { margin-top: var(--space-12); }
+
+.prose blockquote {
+  margin: var(--space-10) 0;
+}
+
+@media (max-width: 640px) {
+  .metric-cell { padding: var(--space-5); }
+  .pull-quote-block { padding: var(--space-8); }
+  .hero-subheadline { font-size: 1rem; }
+}
