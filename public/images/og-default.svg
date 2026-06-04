@@ -1,9 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#F1F8FC"/>
-  <rect x="0" y="0" width="1200" height="2" fill="#C7D8E2"/>
-  <rect x="0" y="628" width="1200" height="2" fill="#C7D8E2"/>
-  <text x="80" y="260" font-family="sans-serif" font-size="64" font-weight="300" fill="#090A0B">Chandra Kanojia</text>
-  <text x="80" y="330" font-family="sans-serif" font-size="28" font-weight="400" fill="#6E7881">Enterprise AI &amp; Transformation Leader</text>
-  <text x="80" y="390" font-family="sans-serif" font-size="20" font-weight="400" fill="#C7D8E2">Fortune 100 Financial Services · Global Delivery · Operating-Model Redesign</text>
-  <text x="80" y="560" font-family="monospace" font-size="16" fill="#C7D8E2">chandrakanojia.com</text>
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect width="1200" height="10" fill="#071A33"/>
+  <rect y="10" width="1200" height="4" fill="#B88746"/>
+  <rect x="80" y="95" width="54" height="54" fill="none" stroke="#071A33" stroke-width="4"/>
+  <path d="M80 122h54M107 95v54" stroke="#E5E7EB" stroke-width="3"/>
+  <rect x="107" y="118" width="23" height="7" fill="#4F46E5"/>
+  <text x="80" y="230" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700" fill="#0A0A0A">Chandra Kanojia</text>
+  <text x="80" y="315" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700" fill="#0A0A0A">Enterprise AI, under operational control.</text>
+  <text x="80" y="370" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">AI, CRM/Salesforce, workflow, analytics, and platform investment moved</text>
+  <text x="80" y="406" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">from ambition to governed operating outcomes.</text>
+  <text x="80" y="525" font-family="Inter, Arial, sans-serif" font-size="19" fill="#071A33">Fortune 100 buyer-side execution · Global consulting pattern recognition · Regulated financial-services depth</text>
+  <text x="80" y="580" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">chandrakanojia.com</text>
 </svg>
