@@ -28,7 +28,7 @@ Last updated: May 2025
 cd chandra-kanojia-site
 git init
 git add .
-git commit -m "Initial build: Quiet Operating Thesis MVP"
+git commit -m "Initial commit: chandrakanojia.com"
 git branch -M main
 git remote add origin https://github.com/iotchandra-afk/iotchandra-afk.github.io.git
 git push -u origin main

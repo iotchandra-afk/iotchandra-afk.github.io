@@ -1,5 +1,5 @@
 /* =====================================================
-   CHANDRA KANOJIA — QUIET OPERATING THESIS
+   CHANDRA KANOJIA — Design System
    Design Token System + Global Styles v2
    ===================================================== */
 
@@ -1083,7 +1083,7 @@ main {
 }
 
 /* ---------- HAIRLINE GEOMETRY ---------- */
-/* Subtle structural marks for the "quiet operating thesis" feel */
+/* Subtle structural marks — geometric hairline devices */
 .geo-rule {
   display: flex;
   align-items: center;
@@ -1218,4 +1218,342 @@ main {
 @media print {
   .site-nav, .theme-toggle, .hero-actions, .site-footer { display: none; }
   body { background: white; color: black; }
+}
+
+/* =====================================================
+   WORKSTREAM ADDITIONS — Precision content update
+   ===================================================== */
+
+/* ---------- METRIC BAND ---------- */
+.metric-band {
+  background: var(--color-elevated);
+  border-bottom: var(--border-thin);
+  padding: var(--space-10) 0;
+}
+
+.metric-band-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--color-hairline);
+  border: var(--border-thin);
+}
+
+.metric-cell {
+  background: var(--color-elevated);
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .metric-band-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-band-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- PULL QUOTE ---------- */
+.pull-quote-block {
+  padding: var(--space-12) var(--space-16);
+  background: var(--color-surface);
+  border-left: 2px solid var(--color-text-primary);
+  margin: var(--space-8) 0;
+}
+
+.pull-quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: var(--ls-heading);
+  color: var(--color-text-primary);
+  font-style: italic;
+  max-width: 640px;
+}
+
+.pull-quote-attr {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ---------- OPERATING PRINCIPLES STRIP ---------- */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-hairline);
+  border: var(--border-thin);
+  margin-top: var(--space-10);
+}
+
+.principle-card {
+  background: var(--color-elevated);
+  padding: var(--space-8) var(--space-8);
+  position: relative;
+}
+
+.principle-mark {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.principle-text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-heading);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .principles-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- VALUE CARDS ---------- */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.value-card {
+  padding: var(--space-7) var(--space-8);
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  background: var(--color-elevated);
+}
+
+.value-card-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.value-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.value-card p {
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+@media (max-width: 640px) {
+  .value-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- KV SUMMARY (AI-READABLE) ---------- */
+.kv-summary {
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.kv-summary-header {
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-elevated);
+  border-bottom: var(--border-thin);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.kv-summary-header-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.kv-intro {
+  padding: var(--space-6);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-text-secondary);
+}
+
+.kv-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.kv-table tr {
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.kv-table tr:last-child {
+  border-bottom: none;
+}
+
+.kv-table td {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-small);
+  vertical-align: top;
+  line-height: var(--lh-body);
+}
+
+.kv-key {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono) !important;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  width: 1%;
+  padding-right: var(--space-8) !important;
+}
+
+.kv-val {
+  color: var(--color-text-secondary);
+}
+
+/* ---------- DEVELOPMENT SECTION ---------- */
+.dev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.dev-item {
+  padding: var(--space-4) var(--space-5);
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  background: var(--color-elevated);
+}
+
+.dev-item-name {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin-bottom: var(--space-1);
+}
+
+.dev-item-type {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .dev-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .dev-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- BOARD BLOCK ---------- */
+.board-block {
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: var(--space-10) var(--space-10);
+  background: var(--color-elevated);
+  position: relative;
+}
+
+.board-block-overline {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.board-block-overline::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--color-hairline);
+}
+
+.board-block h2 {
+  font-size: var(--text-h3);
+  font-weight: 400;
+  letter-spacing: var(--ls-heading);
+  line-height: 1.3;
+  margin-bottom: var(--space-6);
+  max-width: 560px;
+}
+
+.board-block p {
+  font-size: var(--text-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- ARTICLE FULL WIDTH QUOTE ---------- */
+.article-pullquote {
+  margin: var(--space-10) 0;
+  padding: var(--space-8) var(--space-10);
+  border-left: 2px solid var(--color-text-primary);
+  background: var(--color-surface);
+}
+
+.article-pullquote p {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  max-width: none;
+  margin: 0;
 }

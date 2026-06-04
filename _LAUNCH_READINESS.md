@@ -75,7 +75,7 @@ npm run build && npm run preview   # → http://localhost:4321
 
 **Yes — conditionally.**
 
-The codebase is build-ready, email-clean, LinkedIn-configured, and deployment-structured.
+The codebase is email-clean, LinkedIn-configured, and deployment-structured.
 
 **Before pushing, Chandra must confirm:**
 1. He has created the repo `iotchandra-afk.github.io` on GitHub (if not yet done)
@@ -87,7 +87,7 @@ The codebase is build-ready, email-clean, LinkedIn-configured, and deployment-st
 cd chandra-kanojia-site
 git init
 git add .
-git commit -m "Initial build: Chandra Kanojia executive site — Quiet Operating Thesis MVP"
+git commit -m "Initial commit: chandrakanojia.com"
 git branch -M main
 git remote add origin https://github.com/iotchandra-afk/iotchandra-afk.github.io.git
 git push -u origin main

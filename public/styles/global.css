@@ -1,5 +1,5 @@
 /* =====================================================
-   CHANDRA KANOJIA — QUIET OPERATING THESIS
+   CHANDRA KANOJIA — Design System
    Design Token System + Global Styles v2
    ===================================================== */
 
@@ -1083,7 +1083,7 @@ main {
 }
 
 /* ---------- HAIRLINE GEOMETRY ---------- */
-/* Subtle structural marks for the "quiet operating thesis" feel */
+/* Subtle structural marks — geometric hairline devices */
 .geo-rule {
   display: flex;
   align-items: center;
