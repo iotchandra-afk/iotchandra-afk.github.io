@@ -214,30 +214,3 @@ p { margin: 0; color: var(--text-secondary); }
   .authority-band, .cta-box, .mandate-card, .dev-list { padding: 1.35rem; }
   .mandate-card { min-height: auto; }
 }
-
-/* AI Mandate Studio */
-.studio-preview { display: grid; gap: 1.6rem; }
-.studio-mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.studio-mini-card { padding: 1.35rem; border: 1px solid var(--border); border-radius: 18px; background: #fff; }
-.studio-mini-card h3 { font-size: 1.1rem; margin-bottom: 0.65rem; }
-.studio-mini-card p { font-size: 0.96rem; line-height: 1.55; }
-.studio-note { margin-top: 1.2rem; color: var(--authority-navy); font-weight: 600; }
-.studio-workspace { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 2rem; align-items: start; }
-.studio-left h2 { margin-bottom: 1.4rem; }
-.studio-options { display: grid; gap: 0.75rem; }
-.studio-option { width: 100%; text-align: left; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 16px; background: #fff; color: var(--text-primary); cursor: pointer; transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
-.studio-option strong { display: block; font-size: 1rem; margin-bottom: 0.25rem; color: var(--text-primary); }
-.studio-option span { display: block; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.45; }
-.studio-option:hover, .studio-option.active { border-color: var(--signal-indigo); box-shadow: 0 14px 36px rgba(79, 70, 229, 0.1); transform: translateY(-1px); }
-.studio-option.active { background: linear-gradient(180deg, #FFFFFF 0%, var(--soft-indigo) 100%); }
-.studio-output { padding: 1.75rem; border: 1px solid var(--border); border-top: 5px solid var(--signal-indigo); border-radius: 22px; background: #fff; box-shadow: var(--shadow); }
-.studio-output h2 { margin-top: 0.8rem; font-size: clamp(1.8rem, 3vw, 2.45rem); }
-.studio-output dl { margin: 1.5rem 0 0; display: grid; gap: 1rem; }
-.studio-output dl div { padding-top: 1rem; border-top: 1px solid var(--border); }
-.studio-output dt { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal-indigo); margin-bottom: 0.4rem; }
-.studio-output dd { margin: 0; color: var(--text-primary); line-height: 1.58; }
-.insight-bridge { margin-top: 2rem; max-width: 860px; font-size: 1.05rem; line-height: 1.65; color: var(--text-primary); }
-
-@media (max-width: 900px) {
-  .studio-mini-grid, .studio-workspace { grid-template-columns: 1fr; }
-}
