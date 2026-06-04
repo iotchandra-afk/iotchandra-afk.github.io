@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import DiscussCTA from '../components/DiscussCTA.astro';
 
 const webpageSchema = {
   '@context': 'https://schema.org',
@@ -92,17 +93,10 @@ const breadcrumbSchema = {
       </div>
     </div>
   </section>
-
-  <section class="cta-section" aria-labelledby="ai-cta">
-    <div class="container">
-      <div class="cta-box mandate-cta">
-        <div>
-          <p class="panel-label">Discuss the mandate</p>
-          <h2 id="ai-cta">Useful conversations start where AI capability meets the operating model.</h2>
-          <p>AI execution, trusted data, CRM and workflow modernization, controlled action, adoption, platform reliability, and risk-aware operating leverage.</p>
-        </div>
-        <a class="button" href="https://www.linkedin.com/in/chandra-kanojia/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-      </div>
-    </div>
-  </section>
+  <DiscussCTA
+    id="ai-cta"
+    eyebrow="Discuss the mandate"
+    title="The useful conversation starts where AI meets real work."
+    body="Talk to Chandra about trusted data, CRM/Salesforce, workflow, controlled action, adoption, platform reliability, and risk-aware operating change."
+  />
 </PageLayout>

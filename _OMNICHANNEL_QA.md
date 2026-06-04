@@ -87,3 +87,33 @@ The Workbench route is present only as a modular placeholder. It is noindexed, e
 - Removed the right-side floating Operating Focus panel from the homepage hero.
 - Kept the homepage hero as a clean single-column executive opening.
 - Build verified after the correction.
+
+## Responsive hierarchy correction — CTA / component scale
+
+Triggered by desktop review of the dark CTA block.
+
+### Issue found
+
+The CTA component was using oversized display treatment and a long quotation-heavy sentence. On desktop it looked like a second hero, not an executive CTA. The button also appeared detached from the message.
+
+### Fix applied
+
+- Created reusable `src/components/DiscussCTA.astro` to prevent CTA copy/layout divergence across pages.
+- Replaced long CTA headline with shorter human-language headlines.
+- Replaced quote-heavy CTA copy with direct operating language.
+- Added component-specific CTA typography so CTA headings no longer inherit hero-scale visual weight.
+- Reduced CTA padding/radius and improved button alignment.
+- Added responsive CTA rules for tablet and mobile.
+- Reduced homepage hero maximum scale so desktop does not over-expand.
+- Copied final CSS to both `src/styles/global.css` and `public/styles/global.css`, because the site links `/styles/global.css` from `public`.
+
+### Verification
+
+- `npm run build` completed successfully after correction.
+- `dist/index.html` now contains CTA headline: `The useful conversation starts after the demo.`
+- `dist/styles/global.css` contains CTA-specific scale: `.mandate-cta h2 { font-size: clamp(1.85rem, 3.1vw, 2.85rem); }`
+- Old homepage CTA phrase no longer appears in home / Field Notes CTA output.
+
+### Remaining distinction
+
+One article still contains the phrase `Can AI do this?` inside editorial body copy, where it is part of the article’s argument rather than a display CTA. That is intentional and does not affect the layout problem.
