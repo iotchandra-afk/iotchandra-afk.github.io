@@ -214,3 +214,15 @@ p { margin: 0; color: var(--text-secondary); }
   .authority-band, .cta-box, .mandate-card, .dev-list { padding: 1.35rem; }
   .mandate-card { min-height: auto; }
 }
+
+.two-column-feature { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2rem; align-items: start; }
+.insight-grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.muted-note { color: var(--text-muted) !important; font-size: 0.94rem; }
+.compact-dev { gap: 0.85rem; }
+.briefing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1080px) {
+  .insight-grid.four, .briefing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .two-column-feature, .insight-grid.four, .briefing-grid { grid-template-columns: 1fr; }
+}
