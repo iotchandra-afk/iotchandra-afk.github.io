@@ -81,3 +81,9 @@ No hits remained in `src`, `public`, `dist`, or `README.md` for:
 ## Workbench module note
 
 The Workbench route is present only as a modular placeholder. It is noindexed, excluded from primary navigation, and excluded from the sitemap. The core site remains complete without it. The future AI demo can be developed in a separate branch by replacing `src/pages/enterprise-ai-workbench.astro` and adding any required serverless/API files.
+
+## Homepage hero correction
+
+- Removed the right-side floating Operating Focus panel from the homepage hero.
+- Kept the homepage hero as a clean single-column executive opening.
+- Build verified after the correction.

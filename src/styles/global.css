@@ -89,6 +89,8 @@ p { margin: 0; color: var(--text-secondary); }
 .hero::before { content: ''; position: absolute; top: -150px; right: -180px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(79,70,229,0.13), rgba(79,70,229,0) 65%); pointer-events: none; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 4rem; align-items: center; }
 .hero-main { min-width: 0; }
+.hero-single { max-width: 1060px; }
+.hero-single .lead { max-width: 760px; }
 .hero-mark { margin-bottom: 1.45rem; width: 30px; height: 30px; }
 .hero-copy { margin-top: 1.6rem; }
 .credibility-line { margin-top: 1.15rem; color: var(--authority-navy); font-weight: 560; max-width: 760px; }
