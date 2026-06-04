@@ -12,9 +12,10 @@
   --border: #E5E7EB;
   --soft-indigo: #EEF2FF;
   --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
-  --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-label: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --container: 1120px;
   --prose: 720px;
 }
@@ -74,11 +75,11 @@ main { flex: 1; }
 .nav-cta { padding: 0.58rem 0.9rem; border: 1px solid var(--border); border-radius: 999px; color: var(--authority-navy); background: var(--surface); }
 .nav-mobile-toggle { display: none; border: 1px solid var(--border); background: var(--surface); color: var(--text-primary); border-radius: 999px; min-width: 40px; height: 40px; place-items: center; cursor: pointer; }
 
-.kicker { margin: 0 0 1rem; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal-indigo); }
-.panel-label, .band-label { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--control-brass); }
+.kicker { margin: 0 0 1rem; font-family: var(--font-label); font-size: 0.74rem; letter-spacing: 0.095em; text-transform: uppercase; color: var(--signal-indigo); font-weight: 700; }
+.panel-label, .band-label { margin: 0; font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--control-brass); font-weight: 700; }
 h1, h2, h3 { margin: 0; font-family: var(--font-display); letter-spacing: -0.04em; line-height: 1.03; color: var(--text-primary); }
-h1 { font-size: clamp(3.2rem, 7.6vw, 6.2rem); font-weight: 700; max-width: 980px; }
-h2 { font-size: clamp(2rem, 4vw, 3.15rem); font-weight: 690; }
+h1 { font-size: clamp(3.2rem, 7.6vw, 6.2rem); font-weight: 760; max-width: 980px; }
+h2 { font-size: clamp(2rem, 4vw, 3.15rem); font-weight: 720; }
 h3 { font-size: 1.32rem; font-weight: 700; }
 p { margin: 0; color: var(--text-secondary); }
 .lead { font-size: clamp(1.22rem, 1.9vw, 1.52rem); line-height: 1.48; color: var(--text-primary); max-width: 850px; }
@@ -119,14 +120,14 @@ p { margin: 0; color: var(--text-secondary); }
 
 .mandate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .mandate-card { padding: 1.55rem; border: 1px solid var(--border); border-radius: 18px; background: #fff; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; }
-.mandate-card span { width: 40px; height: 40px; border-radius: 50%; background: var(--soft-indigo); color: var(--signal-indigo); display: grid; place-items: center; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1.2rem; }
+.mandate-card span { width: 40px; height: 40px; border-radius: 50%; background: var(--soft-indigo); color: var(--signal-indigo); display: grid; place-items: center; font-family: var(--font-label); font-weight: 700; font-size: 0.8rem; margin-bottom: 1.2rem; }
 .mandate-card h3 { margin-bottom: 1rem; max-width: 320px; }
 .mandate-card p { font-size: 1rem; line-height: 1.58; }
 
 .insight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .insight-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .insight-card { padding: 1.45rem; border: 1px solid var(--border); border-radius: 18px; background: #fff; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05); }
-.insight-card .tag { margin: 0 0 1rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal-indigo); }
+.insight-card .tag { margin: 0 0 1rem; font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.085em; text-transform: uppercase; color: var(--signal-indigo); font-weight: 700; }
 .insight-card h3 { font-size: 1.28rem; margin-bottom: 0.85rem; line-height: 1.12; }
 .insight-card a { text-decoration: none; }
 .insight-card p { font-size: 0.98rem; }
@@ -164,16 +165,16 @@ p { margin: 0; color: var(--text-secondary); }
 .article-header { padding: 5.2rem 0 2.6rem; border-bottom: 1px solid var(--border); }
 .breadcrumb { display: flex; gap: 0.5rem; flex-wrap: wrap; list-style: none; padding: 0; margin: 0 0 1.4rem; font-size: 0.85rem; color: var(--text-muted); }
 .breadcrumb a { text-decoration: none; color: var(--text-muted); }
-.article-meta { display: flex; gap: 1rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--signal-indigo); }
+.article-meta { display: flex; gap: 1rem; margin-bottom: 1rem; font-family: var(--font-label); font-size: 0.75rem; letter-spacing: 0.075em; text-transform: uppercase; color: var(--signal-indigo); font-weight: 700; }
 .article-title { font-size: clamp(2.35rem, 5.4vw, 4.3rem); }
 .article-lede { margin-top: 1.2rem; font-size: 1.16rem; line-height: 1.58; color: var(--text-secondary); }
 .article-body { padding: 3.5rem 0 4.8rem; }
-.prose { font-size: 1.08rem; line-height: 1.72; }
-.prose p { margin: 0 0 1.15rem; color: var(--text-primary); }
-.prose h2 { font-size: clamp(1.55rem, 3vw, 2.05rem); margin: 2.7rem 0 1rem; }
-.prose blockquote { margin: 2rem 0; padding: 1.35rem 1.55rem; border-left: 4px solid var(--signal-indigo); background: var(--soft-indigo); border-radius: 0 14px 14px 0; font-size: 1.28rem; line-height: 1.42; color: var(--text-primary); }
+.prose { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.72; }
+.prose p { margin: 0 0 1.18rem; color: var(--text-primary); }
+.prose h2 { font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2.05rem); margin: 2.7rem 0 1rem; line-height: 1.12; letter-spacing: -0.035em; }
+.prose blockquote { margin: 2rem 0; padding: 1.35rem 1.55rem; border-left: 4px solid var(--signal-indigo); background: var(--soft-indigo); border-radius: 0 14px 14px 0; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1.42; color: var(--text-primary); }
 .author-block { margin-top: 3rem; padding: 1.5rem; background: var(--background-alt); border: 1px solid var(--border); border-radius: 18px; }
-.author-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal-indigo); }
+.author-label { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.085em; text-transform: uppercase; color: var(--signal-indigo); font-weight: 700; }
 .author-name { margin-top: 0.3rem; font-weight: 700; color: var(--text-primary); }
 .author-bio { margin-top: 0.5rem; font-size: 0.96rem; }
 

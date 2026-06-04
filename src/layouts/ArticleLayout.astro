@@ -35,7 +35,7 @@ const breadcrumbSchema = {
   ]
 };
 ---
-<PageLayout title={`${title} | Chandra Kanojia`} description={lede} canonical={canonicalUrl} jsonLd={[articleSchema, breadcrumbSchema]}>
+<PageLayout title={`${title} | Chandra Kanojia`} description={lede} canonical={canonicalUrl} ogImage={`/images/og-${slug}.png`} jsonLd={[articleSchema, breadcrumbSchema]}>
   <section class="article-header" aria-labelledby="article-title">
     <div class="container prose-container">
       <nav aria-label="Breadcrumb">

@@ -1,76 +1,59 @@
-# Chandra Kanojia — Executive Website
+# Chandra Kanojia Executive Site
 
-This repository contains the static website for Chandra Kanojia’s executive profile and thought leadership presence at chandrakanojia.com.
+Static Astro site for Chandra Kanojia's executive profile and thought leadership presence at `chandrakanojia.com`.
 
-The site presents Chandra’s work across enterprise AI, data readiness, CRM/Salesforce, workflow transformation, regulated financial services, platform reliability, governance, and operating-model execution.
+The site is structured around enterprise AI, data readiness, CRM/Salesforce modernization, workflow transformation, AI governance, controlled autonomy, executive briefings, and regulated operating change.
 
-## Current site architecture
+## Architecture
 
-- Home: executive positioning, operating proof categories, three mandate lanes, executive briefing preview, selected Field Notes, and mandate CTA.
-- Executive Profile: mandate fit, public-safe proof categories, career arc, compact education and development, and engagement path.
-- Enterprise AI Point of View: practical thesis on AI moving from demo to real work, including data, controls, evidence, and operating change.
-- Field Notes: short executive notes on work, data, autonomy, and systems of action.
-- Executive Briefings: topics, audience fit, and formats for board, CXO, executive search, consulting, and enterprise AI conversations.
+Core public pages:
 
-## Public-content rules
+- `/` — executive landing page
+- `/executive-profile` — executive profile and deployment lane
+- `/enterprise-ai-transformation` — enterprise AI point of view
+- `/insights` — Field Notes and article index
+- `/executive-briefings` — speaker / executive briefing page
+- `/contact` — LinkedIn contact route
 
-- No exact internal operating metrics.
-- No tenure-led positioning.
-- No employer-confidential examples.
-- No badge-wall credential presentation.
-- No generated-site language such as MVP, reputation platform, score, or internal build grading.
-- Public proof should remain category-based and defensible.
+Reserved module:
 
-## Key pages
+- `/enterprise-ai-workbench` — noindex modular placeholder for a future interactive AI demonstration. It is intentionally excluded from primary navigation and the public sitemap until activated.
 
-| Page | Path |
-|---|---|
-| Home | `/` |
-| Executive Profile | `/executive-profile` |
-| Enterprise AI Point of View | `/enterprise-ai-transformation` |
-| Field Notes | `/insights` |
-| Executive Briefings | `/executive-briefings` |
-| Contact | `/contact` |
+## Design system
 
-## Tech stack
+Typography:
 
-- Astro static site
-- CSS in `src/styles/global.css`
-- GitHub Pages-compatible static output
-- JSON-LD schema embedded through layouts and pages
+- Inter for the core site system
+- Source Serif 4 only for Field Notes article body and pull quotes
 
-## Development
+Visual direction:
+
+- White-first executive profile system
+- Deep navy authority color
+- Electric indigo signal color
+- Muted brass control accent
+- Minimal labels, no credential-stack presentation, no public metric dump
+
+## Search and agent-readiness
+
+The site includes:
+
+- canonical URLs
+- page-specific titles and meta descriptions
+- Open Graph / Twitter preview metadata
+- page-specific 1200x630 social images for key pages and articles
+- sitemap
+- robots.txt
+- `llms.txt`
+- JSON-LD for Person, WebSite, ProfilePage, Article, CreativeWork where appropriate, and BreadcrumbList
+
+## Commands
 
 ```bash
 npm install
-npm run dev
 npm run build
 ```
 
-## Deployment
+## Public-risk controls
 
-The build output is generated into `dist/`.
-
-Do not publish without reviewing:
-
-- public-facing language
-- navigation
-- mobile layout
-- schema and metadata
-- robots and sitemap
-- no sensitive metrics or employer-specific claims
-
-## SEO and agent-readability intent
-
-The site is structured around the following durable topic clusters:
-
-- enterprise AI transformation
-- data readiness for AI
-- AI governance
-- CRM/Salesforce modernization
-- workflow transformation
-- controlled autonomy
-- systems of action
-- regulated financial services transformation
-- executive briefings on enterprise AI
-
+The public site uses proof categories rather than exact internal metrics. It avoids tenure-led positioning, public credential-wall language, employer-sensitive operating claims, and unfinished AI-demo promises.
