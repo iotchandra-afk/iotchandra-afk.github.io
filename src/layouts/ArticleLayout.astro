@@ -7,8 +7,15 @@ interface Props {
   pillar: string;
   date: string;
   slug: string;
+  readTime?: string;
+  updated?: string;
+  briefing?: {
+    about: string;
+    matters: string;
+    question: string;
+  };
 }
-const { title, lede, pillar, date, slug } = Astro.props;
+const { title, lede, pillar, date, slug, readTime = '4 min read', updated = 'June 2026', briefing } = Astro.props;
 const siteUrl = 'https://www.chandrakanojia.com';
 const canonicalUrl = `${siteUrl}/insights/${slug}`;
 
@@ -45,9 +52,28 @@ const breadcrumbSchema = {
           <li><a href="/insights">Insights</a></li>
         </ol>
       </nav>
-      <div class="article-meta"><span>{pillar}</span><span>{date}</span></div>
+      <div class="article-meta"><span>{pillar}</span><span>{readTime}</span><span>Updated {updated}</span></div>
       <h1 id="article-title" class="article-title">{title}</h1>
       <p class="article-lede">{lede}</p>
+      {briefing && (
+        <aside class="briefing-view" aria-label="Briefing view">
+          <p class="briefing-label">Briefing view</p>
+          <div class="briefing-items">
+            <div>
+              <span>What this note is about</span>
+              <p>{briefing.about}</p>
+            </div>
+            <div>
+              <span>Why it matters</span>
+              <p>{briefing.matters}</p>
+            </div>
+            <div>
+              <span>Question leaders should ask</span>
+              <p>{briefing.question}</p>
+            </div>
+          </div>
+        </aside>
+      )}
     </div>
   </section>
   <section class="article-body">

@@ -117,3 +117,33 @@ The CTA component was using oversized display treatment and a long quotation-hea
 ### Remaining distinction
 
 One article still contains the phrase `Can AI do this?` inside editorial body copy, where it is part of the article’s argument rather than a display CTA. That is intentional and does not affect the layout problem.
+
+## Delighter pass — executive utility, not decoration
+
+Completed after responsive hierarchy fix:
+
+- **Copy short profile** added to Executive Profile.
+  - Purpose: make the profile easier to forward into recruiter notes, speaker intros, and internal referrals.
+  - Risk control: copies a short public-safe profile summary only; no internal metrics or sensitive employer-specific proof.
+
+- **Briefing view** added to every Field Note article.
+  - Purpose: give board, CXO, recruiter, and speaker audiences the 30-second version before the full article.
+  - Structure: what the note is about, why it matters, question leaders should ask.
+  - Risk control: no new claims beyond existing article themes.
+
+- **Reading time and last updated** added to Field Note articles and cards.
+  - Purpose: signal maintained, manageable editorial content without turning the site into a news feed.
+  - Current visible format: `3–4 min read · Updated June 2026`.
+
+- **No dark mode added in this pass.**
+  - Reason: layout hierarchy still needed stabilization; dark mode remains optional after visual approval.
+
+- **No progress bar, live LinkedIn feed, or extra framework blocks added.**
+  - Reason: low ROI or higher clutter risk.
+
+Validation:
+
+- Build passed after delighter implementation.
+- Source and built output contain `Copy short profile`, `Briefing view`, and `Updated June 2026`.
+- Public-safe proof standard preserved.
+- Workbench placeholder remains modular and unchanged.

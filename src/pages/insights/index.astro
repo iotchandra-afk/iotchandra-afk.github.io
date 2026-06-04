@@ -18,25 +18,29 @@ const insights = [
     tag: 'Enterprise AI',
     title: 'AI Is Moving Faster Than the Enterprise.',
     href: '/insights/ai-moved-from-assistance-to-execution-operating-model-has-not',
-    desc: 'The technology is moving quickly. The harder question is whether the enterprise can change work, governance, data, and decision-making fast enough to use it well.'
+    desc: 'The technology is moving quickly. The harder question is whether the enterprise can change work, governance, data, and decision-making fast enough to use it well.',
+    meta: '4 min read · Updated June 2026'
   },
   {
     tag: 'Data',
     title: 'The Data Problem Hiding Under Every AI Strategy.',
     href: '/insights/data-problem-hiding-under-every-ai-strategy',
-    desc: 'Most AI plans talk about models. The harder question is whether trusted context reaches the workflow when a decision has to happen.'
+    desc: 'Most AI plans talk about models. The harder question is whether trusted context reaches the workflow when a decision has to happen.',
+    meta: '4 min read · Updated June 2026'
   },
   {
     tag: 'Controlled autonomy',
     title: 'Controlled Autonomy Is the Enterprise AI Product.',
     href: '/insights/controlled-autonomy-is-the-enterprise-ai-product',
-    desc: 'The useful agent is not the one that does the most. It is the one that acts within the right boundaries and hands the work back at the right moment.'
+    desc: 'The useful agent is not the one that does the most. It is the one that acts within the right boundaries and hands the work back at the right moment.',
+    meta: '3 min read · Updated June 2026'
   },
   {
     tag: 'CRM',
     title: 'The CRM Trap: When Systems of Record Never Become Systems of Action.',
     href: '/insights/crm-trap-systems-of-record-never-become-systems-of-action',
-    desc: 'CRM becomes valuable when it helps the enterprise decide what happens next. Recording activity is not enough.'
+    desc: 'CRM becomes valuable when it helps the enterprise decide what happens next. Recording activity is not enough.',
+    meta: '4 min read · Updated June 2026'
   }
 ];
 ---
@@ -83,6 +87,7 @@ const insights = [
             <p class="tag">{item.tag}</p>
             <h3><a href={item.href}>{item.title}</a></h3>
             <p>{item.desc}</p>
+            <p class="card-meta">{item.meta}</p>
           </article>
         ))}
       </div>

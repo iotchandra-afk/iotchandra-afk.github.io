@@ -234,3 +234,88 @@ p { margin: 0; color: var(--text-secondary); }
 @media (max-width: 900px) {
   .two-column-feature, .insight-grid.four, .briefing-grid { grid-template-columns: 1fr; }
 }
+
+/* Executive utility delighters */
+.profile-utility {
+  margin-top: 1.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1rem;
+}
+.copy-button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--authority-navy);
+  border-radius: 999px;
+  padding: 0.68rem 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+.copy-button:hover,
+.copy-button:focus-visible {
+  border-color: var(--signal-indigo);
+  color: var(--signal-indigo);
+  outline: none;
+}
+.profile-utility span {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* Field Notes delighters */
+.briefing-view {
+  margin-top: 2rem;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--background-alt);
+}
+.briefing-label {
+  margin: 0 0 1rem;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  color: var(--signal-indigo);
+  font-weight: 800;
+}
+.briefing-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.briefing-items div {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+}
+.briefing-items span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--authority-navy);
+  font-weight: 750;
+  font-size: 0.92rem;
+}
+.briefing-items p {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.card-meta {
+  margin-top: 1rem;
+  color: var(--text-muted) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .briefing-items { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .profile-utility { align-items: stretch; }
+  .copy-button { width: 100%; justify-content: center; }
+}
