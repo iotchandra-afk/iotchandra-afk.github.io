@@ -1,17 +1,38 @@
 
-(function(){
- const btn=document.querySelector('.menu-toggle'); const nav=document.getElementById('site-nav');
- if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));})}
- const form=document.getElementById('contact-form');
- if(form){
-  const p=new URLSearchParams(location.search);
-  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.value=v||''};
-  set('page_url',location.href);set('document_title',document.title);set('referrer',document.referrer);set('utm_source',p.get('utm_source'));set('utm_medium',p.get('utm_medium'));set('utm_campaign',p.get('utm_campaign'));set('utm_content',p.get('utm_content'));set('submitted_at',new Date().toISOString());
-  form.addEventListener('submit',async e=>{
-   if(location.protocol==='file:'){e.preventDefault();document.getElementById('form-status').textContent='The form is enabled on the live website. The preview is working as intended.';return;}
-   e.preventDefault(); const status=document.getElementById('form-status'); const button=form.querySelector('button[type=submit]');
-   if(!form.reportValidity()) return; button.disabled=true;button.textContent='Sending…';status.textContent='';
-   try{const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(res.ok){form.reset();status.textContent='Thank you. Your note has been sent directly to Chandra.';}else{status.textContent='The note could not be sent. Please use the email link on this page.';}}catch(err){status.textContent='The note could not be sent. Please use the email link on this page.';}finally{button.disabled=false;button.textContent='Send note';}
-  });
- }
+(() => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+      nav.dataset.open = String(!open);
+      document.body.classList.toggle('menu-open', !open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded','false'); nav.dataset.open='false'; document.body.classList.remove('menu-open');
+    }));
+  }
+  const form = document.querySelector('[data-contact-form]');
+  if (form) {
+    const status = document.querySelector('[data-form-status]');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true; button.textContent = 'Sending…';
+      status.className='form-status'; status.textContent='';
+      try {
+        const response = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{Accept:'application/json'}});
+        if (!response.ok) throw new Error('Submission failed');
+        form.reset();
+        status.textContent='Thank you. Your note has been sent. I will review the context and respond directly.';
+        status.classList.add('visible');
+      } catch (err) {
+        status.innerHTML='The note did not go through. Please email <a href="mailto:chandra@chandrakanojia.com">chandra@chandrakanojia.com</a>.';
+        status.classList.add('visible','error');
+      } finally {button.disabled=false;button.textContent='Send note';status.focus();}
+    });
+  }
 })();

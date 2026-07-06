@@ -1,7 +1,0 @@
-This folder is a complete static website with no wrapper directory and no build dependency.
-
-For review: double-click OPEN WEBSITE PREVIEW.html.
-
-The Formspree form is intentionally not submitted from file:// preview mode. It activates on the deployed domain.
-
-For deployment: replace the visible website files in the GitHub Pages repository with these files while preserving the repository .git folder. The site can be published directly from the repository root or uploaded as the Pages artifact.

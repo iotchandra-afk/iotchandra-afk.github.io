@@ -1,5 +1,0 @@
-1. Extract the ZIP into an empty folder.
-2. Double-click OPEN WEBSITE PREVIEW.html.
-3. Review the website in your normal browser.
-
-Nothing else is required at this stage. The contact form is intentionally disabled in local preview mode and activates on the live domain.
