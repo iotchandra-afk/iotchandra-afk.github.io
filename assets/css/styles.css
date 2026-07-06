@@ -215,3 +215,115 @@
     padding-block:36px 40px;
   }
 }
+
+
+/* v9 decisive homepage fold correction
+   Purpose: remove the centered-poster first fold, use the viewport economically, and surface the operating thesis without adding a generic scroll cue.
+   This override is intentionally stronger than v7/v8 and is cache-busted from HTML as styles.css?v=9. */
+@media (min-width: 861px) {
+  .site-header,
+  .header-inner {
+    min-height: 64px;
+  }
+  .home-hero {
+    min-height: 0 !important;
+    align-items: start !important;
+    grid-template-columns: minmax(0, 0.98fr) minmax(300px, 0.62fr) !important;
+    gap: clamp(34px, 4.3vw, 58px) !important;
+    padding-block-start: clamp(34px, 4.2svh, 52px) !important;
+    padding-block-end: clamp(28px, 3.2svh, 40px) !important;
+  }
+  .home-copy {
+    padding-top: clamp(4px, 1svh, 12px);
+  }
+  .home-copy .eyebrow {
+    margin-bottom: 14px;
+  }
+  .home-copy h1 {
+    max-width: 610px !important;
+    font-size: clamp(46px, 4.25vw, 56px) !important;
+    line-height: 1.07 !important;
+    letter-spacing: -0.025em;
+  }
+  .home-copy .lead {
+    max-width: 605px !important;
+    margin-top: 20px !important;
+    font-size: clamp(16.5px, 1.22vw, 18px) !important;
+    line-height: 1.58 !important;
+  }
+  .credibility-line {
+    max-width: 610px !important;
+    margin-top: 20px !important;
+    padding-top: 15px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+  .btn-row {
+    margin-top: 22px !important;
+  }
+  .portrait-frame {
+    width: min(100%, 358px) !important;
+    justify-self: end !important;
+    align-self: start !important;
+    padding-left: 12px !important;
+  }
+  .portrait-frame::before {
+    top: 20px !important;
+    bottom: 20px !important;
+    width: 5px !important;
+  }
+  .home-hero + .section {
+    padding-block-start: clamp(30px, 3.4vw, 46px) !important;
+    padding-block-end: clamp(46px, 5vw, 68px) !important;
+  }
+  .home-hero + .section .section-intro {
+    gap: clamp(32px, 5vw, 68px) !important;
+  }
+  .home-hero + .section h2 {
+    font-size: clamp(30px, 2.7vw, 38px) !important;
+  }
+}
+@media (min-width: 861px) and (min-height: 980px) {
+  .home-hero {
+    padding-block-start: clamp(56px, 5.4svh, 74px) !important;
+    padding-block-end: 44px !important;
+  }
+  .portrait-frame {
+    width: min(100%, 392px) !important;
+  }
+}
+@media (min-width: 1280px) and (max-height: 900px) {
+  .home-hero {
+    padding-block-start: 38px !important;
+    padding-block-end: 28px !important;
+  }
+  .home-copy h1 {
+    font-size: clamp(46px, 4.05vw, 54px) !important;
+  }
+  .portrait-frame {
+    width: min(100%, 350px) !important;
+  }
+}
+@media (min-width: 861px) and (max-height: 760px) {
+  .home-hero {
+    padding-block-start: 26px !important;
+    padding-block-end: 22px !important;
+  }
+  .home-copy h1 {
+    font-size: clamp(42px, 3.8vw, 50px) !important;
+  }
+  .home-copy .lead {
+    margin-top: 16px !important;
+    line-height: 1.5 !important;
+  }
+  .credibility-line {
+    margin-top: 16px !important;
+    padding-top: 13px !important;
+  }
+  .btn-row {
+    margin-top: 18px !important;
+  }
+  .portrait-frame {
+    width: min(100%, 320px) !important;
+  }
+}
