@@ -1,59 +1,14 @@
-# Chandra Kanojia Executive Site
+# Chandra Kanojia Executive Website
 
-Static Astro site for Chandra Kanojia's executive profile and thought leadership presence at `chandrakanojia.com`.
+## Review
 
-The site is structured around enterprise AI, data readiness, CRM/Salesforce modernization, workflow transformation, AI governance, controlled autonomy, executive briefings, and regulated operating change.
+1. Double-click `OPEN WEBSITE PREVIEW.html`.
+2. Review Home, Profile, Perspectives, and Contact using the desktop, laptop, tablet, and mobile buttons.
 
-## Architecture
+No local server, PowerShell, GitHub action, or installation is required for review.
 
-Core public pages:
+The contact form is intended to be tested after deployment because Formspree is restricted to the approved live domain.
 
-- `/` — executive landing page
-- `/executive-profile` — executive profile and deployment lane
-- `/enterprise-ai-transformation` — enterprise AI point of view
-- `/insights` — Field Notes and article index
-- `/executive-briefings` — speaker / executive briefing page
-- `/contact` — LinkedIn contact route
+## Deployment readiness
 
-Reserved module:
-
-- `/enterprise-ai-workbench` — noindex modular placeholder for a future interactive AI demonstration. It is intentionally excluded from primary navigation and the public sitemap until activated.
-
-## Design system
-
-Typography:
-
-- Inter for the core site system
-- Source Serif 4 only for Field Notes article body and pull quotes
-
-Visual direction:
-
-- White-first executive profile system
-- Deep navy authority color
-- Electric indigo signal color
-- Muted brass control accent
-- Minimal labels, no credential-stack presentation, no public metric dump
-
-## Search and agent-readiness
-
-The site includes:
-
-- canonical URLs
-- page-specific titles and meta descriptions
-- Open Graph / Twitter preview metadata
-- page-specific 1200x630 social images for key pages and articles
-- sitemap
-- robots.txt
-- `llms.txt`
-- JSON-LD for Person, WebSite, ProfilePage, Article, CreativeWork where appropriate, and BreadcrumbList
-
-## Commands
-
-```bash
-npm install
-npm run build
-```
-
-## Public-risk controls
-
-The public site uses proof categories rather than exact internal metrics. It avoids tenure-led positioning, public credential-wall language, employer-sensitive operating claims, and unfinished AI-demo promises.
+The package includes the custom-domain file, GitHub Pages workflow, redirects from prior routes, structured data, sitemap, RSS feed, robots file, and all production assets. Files are positioned at the repository root.
