@@ -1,0 +1,33 @@
+FINAL BUILD QA
+Date: July 5, 2026
+
+Scope
+- 28 HTML pages
+- 6 complete cornerstone Field Notes
+- 3 buyer-specific mandate pages
+- Board and advisory page
+- Speaking and media page
+- Voice and AI video page with edited transcript
+- Contact form using Formspree
+- Privacy page and useful legacy redirects
+
+Automated checks passed
+- No broken internal links
+- No missing local assets
+- Unique page titles and descriptions
+- H1, canonical URL, and JSON-LD on every indexable page
+- Image alt text present
+- No duplicate element IDs
+- No prohibited internal metrics, program names, personal Gmail address, or phone number
+- Six article pages present
+- Sitemap, RSS, robots.txt, llms.txt, CNAME, and GitHub Pages workflow present
+
+Visual checks completed
+- Desktop homepage
+- Mobile homepage first viewport and full page
+- Where I Create Value
+- Contact
+- Board and Advisory
+
+Deployment-only check remaining
+- Submit one live Formspree test from chandrakanojia.com after deployment because domain restriction intentionally prevents local submission.
